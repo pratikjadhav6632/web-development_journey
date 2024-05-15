@@ -1,0 +1,47 @@
+.p1{
+    display: inline-block;
+       
+}
+.im1{
+    margin-left: 55px;
+    box-shadow: 13px 15px 5px  #bb3d3d;
+    border-radius: 8px;
+}
+
+.p1{
+    
+    
+    font-size: 20px;
+    border: 2px double  red;
+    margin: 50px;
+    margin-left: 200px;
+    margin-right: 260px;
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgb(161, 159, 159);
+    border-radius: 8px;
+
+}
+.p1:hover{
+        /*box-shadow: 13px 15px 5px  #494545;*/
+        border-radius: 8px;
+        background-color: rgb(235, 255, 255);
+}
+
+.p2{
+    
+    
+    font-size: 20px;
+    border: 2px double  red;
+    margin: 50px;
+    margin-left: 200px;
+    margin-right: 260px;
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgb(161, 159, 159);
+    border-radius: 8px;
+
+}
+.p2:hover{
+        /*box-shadow: 13px 15px 5px  #494545;*/
+        border-radius: 8px;
+        background-color: rgb(235, 255, 255);
+}
