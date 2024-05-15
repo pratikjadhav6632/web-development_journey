@@ -1,3 +1,9 @@
+h1{
+    color: aqua;
+    font-size: 30px;
+    text-align: center;
+
+}
 .parent{
     background-color: aqua;
     border-radius: 8px;
