@@ -1,0 +1,39 @@
+.box{
+    background-color: rgb(192, 222, 222);
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    border: 2px solid aqua;
+}
+.ball{
+    width: 50px;
+    height: 50px;
+    border: 2px solid red;
+    border-radius: 60px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: animatex 3s linear infinite , animatey 1s ease-out infinite alternate;
+
+}
+
+@keyframes animatex {
+    from{
+       left:0;
+        
+    }
+    to{
+       left: 100%;
+    }
+
+    
+}
+@keyframes animatey {
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: 100%;
+    }
+}
