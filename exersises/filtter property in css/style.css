@@ -1,0 +1,10 @@
+.img1{
+    /*filter: blur(4px);*/
+   /* filter: brightness(119%);*/
+   filter:drop-shadow(2px 4px 6px black);
+   /*filter: grayscale(50%);*/
+   /*filter: opacity(23%);*/
+   /*filter: sepia();*/
+  filter: brightness(110%);
+
+}
