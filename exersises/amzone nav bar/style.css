@@ -1,0 +1,32 @@
+*{
+    padding: 0;margin: 0;
+}
+.navbar{
+    height: 80px;
+    background-color: black;
+   
+}
+li{
+    color: aliceblue;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 208, 0);
+}
+ul{
+    display: flex;
+    gap: 10%;
+    padding-top: 15px;
+    padding-left: 5px;
+
+}
+.search{
+    gap: 0%;
+    padding-left: 290px;
+}
+button{
+    background-color: rgb(255, 183, 0);
+    color: white;
+    padding: 5px;
+}
