@@ -61,6 +61,7 @@ console.log("b1<=a1",b1<=a1);
 let a2=3;
 let b2=6;
 
-console.log("a2<b2 && a2<b2",a2<b2 && a2<b2)
+console.log("a2<b2 && a2<b2",a2<b2 && a2<b2);
 console.log("b1==b2 ! a2==a1",b1==b2 || a1==a1);
-console.log("a2<b2 && a2<b2",a2<b2 != a2<b2)
+console.log("a2<b2",!(a2<b2));
+
