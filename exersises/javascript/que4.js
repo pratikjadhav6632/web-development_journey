@@ -18,4 +18,4 @@ else if (score >= 50 && score <= 59)
        }
 else {
     console.log(score, "F");
-}
+} 
