@@ -19,3 +19,12 @@ let i3=1;
 do{
     console.log(i3);
 }while(i3<=5);
+
+
+for(let i=1;i<=10;i++){
+    if(i%2==0){
+        console.log("given no is even",i);
+    }else{
+        console.log("given no is odd",i);
+    }
+}
