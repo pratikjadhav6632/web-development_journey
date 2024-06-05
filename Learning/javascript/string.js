@@ -10,6 +10,8 @@ console.log(str[0]);//string indices
 let str2=`hello world! ${12} `;
 console.log(str2);
 
+let str_2=`my roll no is ${07}`;
+console.log(str_2);
 //string methods
 
 let str3 ="  Hello World!"  ;
