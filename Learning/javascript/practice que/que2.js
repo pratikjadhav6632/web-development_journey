@@ -11,6 +11,6 @@ const profile = {
 console.log(profile);
 
 console.log(profile.followers);
-
+console.log(profile["bio"]);
 profile.posts=1+profile.posts;
 console.log(profile.posts);

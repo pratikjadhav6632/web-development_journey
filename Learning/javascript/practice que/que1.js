@@ -9,3 +9,4 @@ const product={
 }
 console.log(product);
 console.log(product["Title"]);
+console.log(product["price"]);
