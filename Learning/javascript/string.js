@@ -1,5 +1,5 @@
 
-let str="Hello World!"//string
+let str="Hello World!";//string
 
 console.log(str);
 console.log(str.length);//string length
@@ -10,7 +10,7 @@ console.log(str[0]);//string indices
 let str2=`hello world! ${12} `;
 console.log(str2);
 
-let str_2=`my roll no is ${07}`;
+let str_2=`my roll no is ${7}`;
 console.log(str_2);
 //string methods
 
@@ -26,7 +26,7 @@ let str3t=str3.trim()
 console.log(str3t);
 
 //slice
-let str4="I Love JavaScript"
+let str4="I Love JavaScript";
 let str4s=str4.slice(2,5);
 console.log(str4s);
 
@@ -44,3 +44,6 @@ console.log(stra);
 //char At
 let strc=str4.charAt(0);
 console.log(strc);
+
+let sentence='this is a "apple"';
+console.log(sentence);
