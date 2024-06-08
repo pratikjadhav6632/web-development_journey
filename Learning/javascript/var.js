@@ -16,7 +16,7 @@ let b1=10;
 a1=2-a1;
 
 console.log(a1);
-console.log(a1,b1);
+
 
 let o={
     name:"John","project role":"manager"
