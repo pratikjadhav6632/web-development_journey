@@ -36,4 +36,6 @@ let f2=null;
 
 console.log(a2,b2,c2,d2,e2,f2);
 
-console.log( typeof a2, typeof b2, typeof c2, typeof d2, typeof e2, typeof f2);
+console.log(typeof a2, typeof b2,typeof c2);
+
+
