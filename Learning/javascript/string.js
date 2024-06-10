@@ -19,8 +19,8 @@ let str3 ="  Hello World!"  ;
 let str3u=str3.toUpperCase()
 console.log(str3u);
 //lowercase
-let str3l=str3.toLowerCase();
-console.log(str3l);
+let str3l=str3.toLowerCase();890
+console.log(str3l);890
 //trim
 let str3t=str3.trim()
 console.log(str3t);
