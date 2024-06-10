@@ -17,6 +17,9 @@
     console.log("apnacollege"+ 123);//apnacollege123
 
 //What are the length of an empty string & a string with a single space?
+let empty="";
+console.log(empty.length);//0
+
 let str=" ";
 console.log(str.length);//1
 
