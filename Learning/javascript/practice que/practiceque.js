@@ -18,8 +18,8 @@
 
 //What are the length of an empty string & a string with a single space?
 let empty="";
-console.log(empty.length);//0
+console.log(empty.length);
 
-let str=" ";
-console.log(str.length);//1
+let space=" ";
+console.log(space.length);
 
