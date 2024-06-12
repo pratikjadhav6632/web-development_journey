@@ -52,7 +52,6 @@ console.log("b1!=a1",b1!=a1);
 console.log("b1===a1",b1===a1);//strict it also checks data type of both var
 console.log("b1>a1",b1>a1);
 console.log("b1<a1",b1<a1);
-
 console.log("b1>=a1",b1>=a1);
 console.log("b1<=a1",b1<=a1);
 
