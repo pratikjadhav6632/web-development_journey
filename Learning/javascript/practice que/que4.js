@@ -19,3 +19,12 @@ else if (score >= 50 && score <= 59)
 else {
     console.log(score, "F");
 } 
+
+let month="nov-feb";
+
+if(month===`${month}`)
+{
+    console.log(`${month} winter is here`);
+}else{
+    console.log("summer is here");
+}
