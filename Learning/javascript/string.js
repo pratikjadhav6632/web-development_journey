@@ -45,7 +45,8 @@ console.log(stra);
 let strc=str4.charAt(0);
 console.log(strc);
 
-let sentence='this is a "apple"';
+let sentence="this is a apple";
 console.log(sentence);
+
 
 
