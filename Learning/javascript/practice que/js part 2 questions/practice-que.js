@@ -19,3 +19,28 @@ let userName=prompt("Enter yor name");
 let age = prompt("Enter your age");
 let msg =`${userName} is ${age} years old`;
 alert(msg);
+
+
+/*Write switch statement ro print the months in a quarter.
+Months in Quarter 1 : January,february,march.
+Months in Quarter 2 :April,May ,June.
+Months in Quarter 3 :july,august,september.
+Months in Quarter 4 : october,november,december.
+[Use the number as the case value in switch]*/
+
+let Quarter=1;
+
+switch(Quarter){
+    case 1 :console.log("January,february,march");
+    break;
+
+    case 2 : console.log("April,May ,June.");
+    break;
+
+    case 3 : console.log("july,august,september");
+    break;
+
+    case 4 : console.log(" october,november,december");
+    break;
+    default: console.log("invalid Quarter");
+}
