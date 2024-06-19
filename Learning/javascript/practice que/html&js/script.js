@@ -10,11 +10,18 @@ if(num%5===0){
 
 //que 6. Create a game where you start with any random number.ask the suer to keep guessin the game number until the user enters correct value.
 
-let gameNum=25;
+/*let gameNum=25;
 
 let userNum=prompt("Guess the correct game number");
 
 while(userNum!=gameNum){
     userNum=prompt("Guess the correct game number,try again");
 }
-console.log("congratulation you guess the correct game number");6
+console.log("congratulation you guess the correct game number");6*/
+
+let firstName=prompt("Enter your first name");
+let lastName=prompt("Enter your last name");
+
+//console.log("welcome",firstName,lastName,"!");
+let msg=`Welcome ${firstName} ${lastName} !`;
+alert(msg);
