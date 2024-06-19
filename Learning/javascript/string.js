@@ -38,15 +38,4 @@ console.log(str4c);
 let str4r=str4.replace("Love","like");
 console.log(str4r);
 
-let stra=str4.replaceAll("I Love JavaScript","i like java");
-console.log(stra);
-
-//char At
-let strc=str4.charAt(0);
-console.log(strc);
-
-let sentence="this is a apple";
-console.log(sentence);
-
-
 
