@@ -12,7 +12,7 @@ if(num%10==0){
 /*que2. Take the user name & age as input using prompts
 then return back the following statement to the user as an alert (by substituting their name & age);
 name is age years old.
-[Use templet literals to print this sntences]
+[Use templet literals to print this sntences]*/
 
 
 let userName=prompt("Enter yor name");
