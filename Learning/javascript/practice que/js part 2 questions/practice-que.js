@@ -12,7 +12,7 @@ if(num%10==0){
 /*que2. Take the user name & age as input using prompts
 then return back the following statement to the user as an alert (by substituting their name & age);
 name is age years old.
-[Use templet literals to print this sntences]*/
+[Use templet literals to print this sntences]
 
 
 let userName=prompt("Enter yor name");
@@ -21,7 +21,7 @@ let msg =`${userName} is ${age} years old`;
 alert(msg);
 
 
-/*Write switch statement ro print the months in a quarter.
+/*que3.Write switch statement ro print the months in a quarter.
 Months in Quarter 1 : January,february,march.
 Months in Quarter 2 :April,May ,June.
 Months in Quarter 3 :july,august,september.
@@ -43,4 +43,30 @@ switch(Quarter){
     case 4 : console.log(" october,november,december");
     break;
     default: console.log("invalid Quarter");
+}
+
+/*que4.A string is a golden string if it start with character 'A' or 'a' And has a total length greater than 5.
+for given string print if it is golden or not*/
+
+let str="apple";
+
+if(str[0]=="A" || str[0]=="a" && str.length>=5){
+    console.log("string is Golden");
+}else{
+    console.log("string is Not Golden");
+}
+
+//que5.Write a program to find largest of 3 numbers.
+let firstNum=10;
+let secNum=20;
+let thirdNum=12;
+
+if(firstNum>secNum&& firstNum>thirdNum){
+    console.log("larger num is:",firstNum);
+}else if(secNum>firstNum&&secNum>thirdNum){
+    console.log("larger num is:",secNum);
+}else if(thirdNum>firstNum&&thirdNum>secNum){
+    console.log("larger num is:",thirdNum);
+}else{
+    console.log("all num are equals");
 }
