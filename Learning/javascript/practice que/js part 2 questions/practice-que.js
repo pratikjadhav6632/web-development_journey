@@ -70,3 +70,17 @@ if(firstNum>secNum&& firstNum>thirdNum){
 }else{
     console.log("all num are equals");
 }
+
+/*write a program to check if 2 numbers have the same last digits.
+Eg.32 and 47852 have the same last digit i.e. 2 */
+let num1=5673;
+let num2=235;
+
+let lastdigit1=num1%10;
+let lastdigit2=num2%10;
+
+if(lastdigit1==lastdigit2){
+    console.log(`${num1} and ${num2} have the same last digits`);
+}else{
+    console.log(`${num1} and ${num2} have  the different last digits`);
+}
