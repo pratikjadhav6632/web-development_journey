@@ -28,3 +28,6 @@ if(month===`${month}`)
 }else{
     console.log("summer is here");
 }
+let fruits =["apple","banana","orange"];
+
+console.log(fruits[0]);
