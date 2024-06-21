@@ -12,3 +12,6 @@ fruits[0]="cherry";
 console.log(fruits);
 fruits[1]="apple";
 console.log(fruits);
+
+let arrlen=fruits[0].length;
+console.log(arrlen)
