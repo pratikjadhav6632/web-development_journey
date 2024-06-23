@@ -15,3 +15,6 @@ console.log(fruits);
 
 let arrlen=fruits[0].length;
 console.log(arrlen)
+
+let arry=['apple','banana','mango'];
+console.log(array.indexof(1));
