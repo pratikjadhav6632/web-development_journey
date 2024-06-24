@@ -18,3 +18,9 @@ console.log(arrlen)
 
 let arry=['apple','banana','mango'];
 console.log(array.indexof(1));
+
+//method of array
+
+let avr=["orange","mango","gava","banana"];
+avr.slice(2,4);
+
