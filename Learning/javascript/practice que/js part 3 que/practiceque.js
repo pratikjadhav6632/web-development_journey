@@ -16,7 +16,7 @@ Print, [9, 0, -2]*/
     let result2=arr2.slice(1);
     console.log(result2);
 
-/* Qs3. Write a JavaScript program to check whether a string is blank or not.
+/* Qs3. Write a JavaScript program to check whether a string is blank or not.*/
      
      let string=prompt("enter string");
 
@@ -24,7 +24,7 @@ Print, [9, 0, -2]*/
         console.log("string is blank");
      }else{
         console.log("string is full");
-     }*/
+     }
     
 /*Qs4. Write a JavaScript program to test whether the character at the given (character)
      index is lower case.*/
