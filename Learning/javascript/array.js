@@ -21,6 +21,9 @@ console.log(array.indexof(1));
 
 //method of array
 
-let avr=["orange","mango","gava","banana"];
-avr.slice(2,4);
+//let avr=["orange","mango","gava","banana"];
+///avr.slice(2,4);
+
+let cars=['bmw','audi','ferari','mercedies'];
+console.log(cars.sort());
 
