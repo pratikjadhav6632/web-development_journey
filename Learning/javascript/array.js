@@ -27,3 +27,5 @@ console.log(array.indexof(1));
 let cars=['bmw','audi','ferari','mercedies'];
 console.log(cars.sort());
 
+let cars2=[['bmw'],['mercedes'],['audi']];
+console.log(cars2);
