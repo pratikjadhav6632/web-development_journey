@@ -55,5 +55,5 @@ Print, [9, 0, -2]*/
         console.log("element exists in array");
 
      }else{
-        console.log("element does not exists in array");
+      console.log("Element does not exists in array");
      }
