@@ -66,3 +66,7 @@ switch(exp){
     default :
     console.log("sorry we are out of RS{exp}");
 }
+
+//ternary expression
+let o_p=(age<18) ? 'not able to vote' : 'your able to vote';
+console.log(o_p);

@@ -1,0 +1,1 @@
+let tsak=prompt("enter your choice")
