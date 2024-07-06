@@ -29,3 +29,6 @@ console.log(cars.sort());
 
 let cars2=[['bmw'],['mercedes'],['audi']];
 console.log(cars2);
+
+let newCars=cars.concat(cars2);
+console.log(newCars);
