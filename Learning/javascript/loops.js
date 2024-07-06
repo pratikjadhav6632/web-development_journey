@@ -28,3 +28,8 @@ for(let i=1;i<=10;i++){
     }
 }
 
+let fruits=['mango','banana','gava','apple'];
+
+for(char of fruits){
+    console.log(char);
+}
