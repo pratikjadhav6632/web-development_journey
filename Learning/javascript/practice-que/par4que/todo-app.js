@@ -1,1 +1,1 @@
-let tsak=prompt("enter your choice")
+let task=prompt("enter your choice")
