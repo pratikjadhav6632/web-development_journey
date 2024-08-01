@@ -6,6 +6,7 @@ let obj={
 console.log(obj);
 console.log(obj.name);
 
+//object of objects
 const classInfo={
     aman:{
         grade:"A+",
@@ -30,3 +31,33 @@ console.log(classInfo.shraddha.city);
 console.log(classInfo.karan);
 console.log(classInfo.karan.city="Pune");
 console.log(classInfo.karan);
+
+
+//array of objects
+
+const ClassInfo=[
+    {
+        name:"aman",
+        grade:"A+",
+        city:"Dehli"
+    },
+    {
+        name:"shraddha",
+        grade:"A",
+        city:"Pune"
+    },
+    {
+        name:"karan",
+        grade:"O",
+        city:"Mumbai"
+    }
+];
+console.log(ClassInfo);
+
+console.log(ClassInfo[0]);
+
+console.log(ClassInfo[1].name);
+
+console.log(ClassInfo[2]);
+console.log(ClassInfo[2].city="pune");
+console.log(ClassInfo[2]);
