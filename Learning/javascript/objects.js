@@ -61,3 +61,11 @@ console.log(ClassInfo[1].name);
 console.log(ClassInfo[2]);
 console.log(ClassInfo[2].city="pune");
 console.log(ClassInfo[2]);
+
+//Math objects
+
+console.log(Math);
+console.log(Math.random());
+
+let random=Math.floor(Math.random()*100+1);
+console.log(random);
