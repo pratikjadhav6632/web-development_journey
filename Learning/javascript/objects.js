@@ -69,6 +69,7 @@ console.log(Math.floor(5.5));
 console.log(Math.ceil(6.2));
 console.log(Math.PI);
 console.log(Math.random());
+console.log(Math.E);
 
 let random=Math.floor(Math.random()*100+1);
 console.log(random);
