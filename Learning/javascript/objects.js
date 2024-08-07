@@ -73,3 +73,7 @@ console.log(Math.E);
 
 let random=Math.floor(Math.random()*100+1);
 console.log(random);
+
+
+let otp=Math.floor(Math.random()*10000+1000);
+console.log(otp);
