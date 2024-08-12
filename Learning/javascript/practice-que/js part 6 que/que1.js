@@ -6,3 +6,12 @@ function printPoem(){
 }
 
 printPoem();
+
+//Create a function to roll a dice and always display the value of dice (1 to 6)
+
+function rolldice(){
+    let rand=Math.floor(Math.random()*6)+1;
+    console.log(rand);
+}
+
+rolldice();
