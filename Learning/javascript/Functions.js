@@ -1,4 +1,4 @@
-
+//Functions
 function hello(){
     console.log("Hello");
 }
@@ -28,3 +28,14 @@ function eligibleForVote(){
     }
 }
 eligibleForVote();
+
+//function with arguments.
+
+function print_Name(name){
+    console.log(name);
+}
+
+print_Name("Code with belifs");
+print_Name("Aman");
+
+    
