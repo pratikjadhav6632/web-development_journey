@@ -38,4 +38,9 @@ function print_Name(name){
 print_Name("Code with belifs");
 print_Name("Aman");
 
-    
+function printInfo(name,age){
+    console.log(`${name}'s age is ${age}.`);
+}
+
+printInfo("Karan",21);
+
