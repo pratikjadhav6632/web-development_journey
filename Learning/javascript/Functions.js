@@ -45,3 +45,21 @@ function printInfo(name,age){
 printInfo("Karan",21);
 
 
+//Return keyword.
+
+function sum(a,b){
+    return a+b;
+}
+
+console.log(sum(1,5));
+
+function isadult(age){
+    if(age<18){
+        return "Not adult";
+    }
+    else{
+        return "Adult";
+    }
+}
+
+console.log(isadult(18));
