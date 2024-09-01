@@ -63,3 +63,13 @@ function isadult(age){
 }
 
 console.log(isadult(18));
+
+//Scope in JS
+let sum2 =59; //Global Scope
+function calsum(a,b){
+    let sum2 =a+b; //Function Scope
+    console.log(sum2);
+}
+
+calsum(3,5);
+console.log(sum2);
