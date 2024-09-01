@@ -94,3 +94,15 @@ function outerFunc(){
     innerFunc();
 }
 outerFunc();
+
+//Function Expression.
+
+let name2=function(a,b){
+    console.log(a+b);
+}
+name2(5,9);
+
+const sum3 = function(w,r) {
+    return w + r;
+}
+sum3(2,4);
