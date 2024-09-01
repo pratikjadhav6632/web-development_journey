@@ -73,3 +73,24 @@ function calsum(a,b){
 
 calsum(3,5);
 console.log(sum2);
+
+{
+    let a="This is a block scope";//Scope block
+    console.log(a);
+}
+
+
+function outerFunc(){
+    let a=10;
+    let b=5;
+
+    function innerFunc(){ //lexical Scope
+
+        let x=1;
+
+        console.log(a,"this outer varibale");
+        console.log(x,"This is inner variable")
+    }
+    innerFunc();
+}
+outerFunc();
