@@ -1,4 +1,28 @@
 
+/*Qs1. Write a JavaScript function that returns array elements larger than a number. */
+function largenum(arr,num){
+        return arr.filter(element => element > num);
+}
+let arr=[1,34,4,5,6,7,8];
+const num=20;
+let largernum=largenum(arr,num);
+console.log(largernum);
+
+/*Qs2. Write a JavaScript function to extract unique characters from a string.
+Example: str = “abcdabcdefgggh” ans = “abcdefgh” */
+function uniquechar(str){
+    let unique='';
+    for(let char of str){
+        if(!(unique.includes(char))){
+            unique += char;
+        }
+    }
+    return unique;
+}
+const str="abcdabcdefgggh";
+const unique=uniquechar(str);
+console.log(unique);
+
 
 /*Qs3. Write a JavaScript function that accepts a list of country names as input and
 returns the longest country name as output.
