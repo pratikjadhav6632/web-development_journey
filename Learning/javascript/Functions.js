@@ -139,3 +139,20 @@ function oddEvenfact(request){
 }
 let func=oddEvenfact("even");
 func(2);
+
+//Methods 
+let calculator ={
+    add: function(a,b){
+        return a+b;
+    },
+    sub(a,b){           //shorthand way 
+        return a-b;
+    },
+    mul :function(a,b){
+        return a*b;
+    }
+}
+
+console.log(calculator.add(6,5));
+console.log(calculator.sub(10,4));
+console.log(calculator.mul(2,5));
