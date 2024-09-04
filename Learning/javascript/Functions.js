@@ -120,3 +120,22 @@ let greet= function(){
 }
 
 multiplegreet(greet,100);
+
+
+function oddEvenfact(request){
+    if(request=="odd"){
+    return function(n){
+        console.log(!(n%2==0));
+    }
+    }
+    else if(request=="even"){
+        return function(n){
+            console.log(n%2==0);
+        }
+    }
+    else{
+        console.log("Wrong Request");
+    }
+}
+let func=oddEvenfact("even");
+func(2);
