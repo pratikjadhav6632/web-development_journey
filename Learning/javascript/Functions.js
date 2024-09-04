@@ -106,3 +106,17 @@ const sum3 = function(w,r) {
     return w + r;
 }
 sum3(2,4);
+
+//Higher Order Function
+
+function multiplegreet(func,count){
+    for(let i=1;i<=count;i++){
+        func();
+    }
+}
+
+let greet= function(){
+    console.log("Hello");
+}
+
+multiplegreet(greet,100);
