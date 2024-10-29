@@ -64,9 +64,6 @@ console.log(ClassInfo[2]);
 
 //Math objects
 
-console.log(Math);
-console.log(Math.floor(5.5));
-console.log(Math.ceil(6.2));
 console.log(Math.PI);
 console.log(Math.random());
 console.log(Math.E);
@@ -77,3 +74,4 @@ console.log(random);
 
 let otp=Math.floor(Math.random()*10000+1000);
 console.log(otp);
+
