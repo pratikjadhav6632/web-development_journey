@@ -90,3 +90,13 @@ const student ={
     
 }
 console.log(student.getAvg());
+
+//try& catch keyword
+
+try{
+   // let a=12;
+    console.log(a);
+
+}catch(e){
+    console.log(e);
+}
