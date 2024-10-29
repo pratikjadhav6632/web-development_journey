@@ -75,3 +75,18 @@ console.log(random);
 let otp=Math.floor(Math.random()*10000+1000);
 console.log(otp);
 
+//This keyword
+
+const student ={
+    name:"shraddha",
+    age:23,
+    english:96,
+    math:89,
+    phy:93,
+    getAvg(){
+        let Avg=(this.english+this.math+this.phy)/3;
+        console.log(`${this.name} got Avg marks=${Avg}`);
+    }
+    
+}
+console.log(student.getAvg());
