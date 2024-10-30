@@ -160,3 +160,4 @@ console.log(calculator.add(6,5));
 console.log(calculator.sub(10,4));
 console.log(calculator.mul(2,5));
 console.log(calculator.div(2,5));
+
