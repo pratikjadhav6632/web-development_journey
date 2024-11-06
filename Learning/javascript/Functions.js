@@ -161,3 +161,25 @@ console.log(calculator.sub(10,4));
 console.log(calculator.mul(2,5));
 console.log(calculator.div(2,5));
 
+//Arrow Function
+
+const sum23 = (a,b)=> {
+    console.log(a+b);
+};
+let a= sum23(12,20);
+console.log(a);
+
+
+const pow = (a,b) => {
+    return a**b;
+   
+};
+let b= pow(3,4);
+console.log(b);
+
+const cube = n => {
+    return n*n*n;
+}
+let c= cube(4);
+console.log(c);
+
