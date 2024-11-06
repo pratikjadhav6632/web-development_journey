@@ -202,3 +202,21 @@ let id= setInterval(()=> {
     console.log("Apnna college");
 },2000);
 clearInterval(id);
+
+//this with arrow function
+
+ const  stud = {
+    name:'aman',
+    age:21,
+    mark:99,
+    getname: function(){
+        return this.name;
+    },
+    getinfo:function (){
+        setTimeout(()=>{
+            console.log(this);
+        },4000);
+    }
+ };
+ console.log(stud.getname());
+ console.log(stud.getinfo());
