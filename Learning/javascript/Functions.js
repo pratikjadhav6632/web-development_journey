@@ -195,3 +195,10 @@ setTimeout(()=>{
     console.log("Apnna college");
 },600);
 console.log("Welcome to ");
+
+//setInterval function
+
+let id= setInterval(()=> {
+    console.log("Apnna college");
+},2000);
+clearInterval(id);
