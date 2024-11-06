@@ -183,3 +183,7 @@ const cube = n => {
 let c= cube(4);
 console.log(c);
 
+//Implicit arrow func
+const N_sum = (a,b) => (a+b);
+let b1 = N_sum(1,5);
+console.log(b1);
