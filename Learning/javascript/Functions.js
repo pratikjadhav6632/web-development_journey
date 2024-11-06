@@ -187,3 +187,11 @@ console.log(c);
 const N_sum = (a,b) => (a+b);
 let b1 = N_sum(1,5);
 console.log(b1);
+
+//setTimeout function
+
+console.log("Hii there");
+setTimeout(()=>{
+    console.log("Apnna college");
+},600);
+console.log("Welcome to ");
