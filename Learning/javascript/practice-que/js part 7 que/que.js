@@ -34,3 +34,5 @@ let num =4;
  const iseven = (num) => num % 2 == 0;
  console.log(iseven(num));
     
+
+ 
