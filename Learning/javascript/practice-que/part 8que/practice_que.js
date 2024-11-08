@@ -11,7 +11,6 @@ console.log(mul);
 
 let arr=[1,24,56,4,3,678,1,0];
 let min=-1;
-
 let ans=arr.reduce((min,el)=>{
     if(el<min){
         return el;
@@ -35,3 +34,4 @@ console.log(ans);
     return ans;
  }
  console.log(getmin([1,7,5,34,-1]));
+
