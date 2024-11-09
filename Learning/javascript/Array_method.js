@@ -86,4 +86,18 @@ let max=arr_m.reduce((max,el)=>{
 });
 console.log(max);
 
+//Default parameter
+
+function func(a,b=3){ //default value i the argument.
+    return a+b; 
+}
+console.log(func(2));
+
+//Spread
+let ar_r=[1,3,24,43,53,23,1];
+let spred=Math.min(...ar_r);
+console.log(spred);
+
+let str="Apnna College";
+console.log(...str);
 
