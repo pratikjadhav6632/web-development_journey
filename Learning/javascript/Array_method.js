@@ -112,3 +112,14 @@ let Str=["Hello World!"];
 console.log(Str);
 let N_Str=[...Str];
 console.log(N_Str);
+
+//Spread with object literals.
+
+const data={
+    email:"Ironman@gmail.com",
+    pass:"iron123$"
+};
+console.log(data);
+
+const datacopy={...data,id:1};
+console.log(datacopy);
