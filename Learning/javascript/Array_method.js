@@ -101,3 +101,14 @@ console.log(spred);
 let str="Apnna College";
 console.log(...str);
 
+//spread with array literal  //it copy old arr in new array.
+let Arr=[1,2,3,45,6,43,2];
+console.log(Arr);
+let N_Arr=[...Arr];
+console.log(N_Arr);
+
+//spread with string literal //it copy old str in new string.
+let Str=["Hello World!"];
+console.log(Str);
+let N_Str=[...Str];
+console.log(N_Str);
