@@ -20,3 +20,19 @@ let arr=[1,2,3];
 let new_arr=arr.map((arr)=>arr+5);
 console.log(new_arr);
 
+/*Qs3. Create a new array whose elements are in uppercase of words present in the
+original array.*/
+
+let original_arr=["APPLE","ball","Cat","DOG"];
+
+let New_Arr=original_arr.map((original_arr)=>original_arr.toUpperCase());
+console.log(New_Arr);
+
+
+
+/*Q. Finding lowercase characters within a string */
+let str_arr=["APPLE","ball","Cat","DOG"];
+let New_str=str_arr.filter((str_arr)=>{
+    return (str_arr >="a"&& str_arr <= "z")
+});
+console.log(New_str)
