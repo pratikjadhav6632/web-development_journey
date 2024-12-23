@@ -152,4 +152,4 @@ console.log("SecomdRunnerup is:",SecondRunnerup);
 console.log("Our other participants:",...Others);
 
 
-//
+//Destructuring  objects
