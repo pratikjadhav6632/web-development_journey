@@ -153,3 +153,36 @@ console.log("Our other participants:",...Others);
 
 
 //Destructuring  objects
+
+
+const class_student = {
+    
+   Roll_no_1:{ 
+    name:"ajay",
+    Age:16,
+    class:10,
+    subjects:"Eng,Math,Sci,EVS",
+    Username:"Ajay@123",
+    Password:"Abc123"
+   },
+   Roll_no_2:{ 
+    name:"Seema",
+    Age:16,
+    class:10,
+    subjects:"Eng,Math,Sci,EVS",
+    Username:"seema@123",
+    Password:"adfc123"
+   },
+   Roll_no_3:{ 
+    name:"yash",
+    Age:16,
+    class:10,
+    subjects:"Eng,Math,Sci,EVS",
+    Username:"yash@123",
+    Password:"srewfbc123"
+   }
+};
+console.log(class_student);
+
+let {name,Username,Password}=class_student.Roll_no_1;
+console.log("\t student name:",name,"\t student username:",Username," \t student pass:",Password);
