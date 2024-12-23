@@ -35,4 +35,14 @@ let str_arr=["APPLE","ball","Cat","DOG"];
 let New_str=str_arr.filter((str_arr)=>{
     return (str_arr >="a"&& str_arr <= "z")
 });
-console.log(New_str)
+console.log(New_str);
+
+/*Qs4. Write a function called doubleAndReturnArgs which accepts an array and a
+variable number of arguments. The function should return a new array with the original
+array values and all of the additional arguments doubled.*/
+
+
+const doubleAndReturnArgs=(arr,...args)=>[...arr,...args.map((v)=>v*2),];
+
+console.log(doubleAndReturnArgs([12,21],21,24,754));
+console.log(doubleAndReturnArgs([12,1],1,2,4));
