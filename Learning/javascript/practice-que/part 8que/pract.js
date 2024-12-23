@@ -46,3 +46,11 @@ const doubleAndReturnArgs=(arr,...args)=>[...arr,...args.map((v)=>v*2),];
 
 console.log(doubleAndReturnArgs([12,21],21,24,754));
 console.log(doubleAndReturnArgs([12,1],1,2,4));
+
+
+/*Qs5. Write a function called mergeObjects that accepts two objects and returns a new
+object which contains all the keys and values of the first object and second object.*/
+
+let mergeObjects=(obj1,obj2)=>({...obj1,...obj2});
+mergeObjects=({a:1,b:2},{c:3,d:4});
+console.log(mergeObjects);
