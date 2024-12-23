@@ -123,3 +123,33 @@ console.log(data);
 
 const datacopy={...data,id:1};
 console.log(datacopy);
+
+
+//Rest
+
+function sum(...args){
+    for(let i=0;i<args;i++){
+        console.log("You gave us:",args[i]);
+    }
+}
+console.log(sum(1));
+
+
+function add(...args){
+    return args.reduce((sum,el)=>sum+el);
+}
+console.log(add(12,473,23,2,122));
+
+
+//Destructing
+
+
+let names=["Stark","bruce","Joe","merry","kim","Tom"];
+let [Winner,Runnerup,SecondRunnerup,...Others]=names;
+console.log("Winner is:",Winner);
+console.log("Runnerup is:",Runnerup);
+console.log("SecomdRunnerup is:",SecondRunnerup);
+console.log("Our other participants:",...Others);
+
+
+//
