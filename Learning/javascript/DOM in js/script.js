@@ -4,47 +4,47 @@
 
 // 1. getElementById :
 
-document.getElementById("heading");
+console.log(document.getElementById("#prof"));
+
 
 // 2. gerElementByClassName :
-document.getElementsByClassName("box");
+let prof = document.getElementsByClassName("box");
+console.log(prof);
 
 // 3. getElementByTagName :
-document.getElementsByTagName('h1');
+console.log(document.getElementsByTagName('h1'));
 
 //Query Selectors.
 
 // 1. By TagName:
-document.querySelector('p');
+console.dir(document.querySelector('p'));
 
 // 2. By Id :
-document.querySelector('#id');
+console.dir(document.querySelector('#heading'));
 
 // 3.By className: 
-document.querySelector(".className");
+console.dir(document.querySelector(".box"));
 
 // 4. select all:
-document.querySelectorAll('p');
+console.dir(document.querySelectorAll('p'));
 
 // 5. specific element
-document.querySelector('div a');
+console.dir(document.querySelector('div img'));
 
 
 //Using properties & methods
 
 // 1.innerText:
-Obj.innertext = "changes";
-
-// 2.textContent:
-Obj.textContent;
-
-// 3.innerHTML
-Obj.innerHTML = "Hi,I am <b>Peter Parker</b>!";
+let para = document.getElementsByTagName("p");
+console.log(para[0]);
+para[0].innerText = "Hi,I am <b>Peter Parker</b>!";
 
 
-//Manipulating Attributes
+// // 2.textContent:
+let content = para[0].innerContent;
+console.log(content);
 
-Obj.getAttribute(attr); //getter
-Obj.setAttribute(attr, val); //setter
 
-//
+// // 3.innerHTML
+let html = para[0].innerHTML;
+console.log(html);
