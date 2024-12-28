@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+}
+
+h3{
+
+}
+div{
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background-color: blue;
+    padding:10px;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    border: none;
+    border-radius: 8px;
+    box-shadow: -10px 5px 18px  black;
+}
