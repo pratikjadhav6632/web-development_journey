@@ -1,3 +1,22 @@
 .red {
     color: red;
 }
+
+.Blue {
+    color: blue;
+}
+
+.box {
+    border: 1px solid black;
+    background-color: pink;
+}
+
+.btnStyle {
+    background-color: blue;
+    color: white;
+}
+
+.h1_new {
+    color: purple;
+    text-decoration: underline;
+}
