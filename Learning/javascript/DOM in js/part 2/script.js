@@ -49,3 +49,30 @@ p.addEventListener('click',changecolor);
 h1.addEventListener('click',changecolor);
 h3.addEventListener('click',changecolor);
 btn00.addEventListener('click',changecolor);
+
+//Keyboard Events
+
+let inp=document.querySelector('input');
+
+inp.addEventListener('keydown',key);
+
+function key(event){
+    console.log("key is:",event.key);
+    if(event.key=="ArrowDown"){
+        console.log("character goes Backward");
+    }else if(event.key=="ArrowUp"){
+        console.log("character goes Forward");
+    }
+    else if(event.key=="ArrowLeft"){
+        console.log("character goes Left");
+    }
+    else if(event.key=="ArrowRight"){
+        console.log("character goes Right");
+    }
+}
+
+    let tp=document.querySelector('.tp');
+ tp.addEventListener("afterprint", (event) => {
+    console.log("After print");
+  });
+  
