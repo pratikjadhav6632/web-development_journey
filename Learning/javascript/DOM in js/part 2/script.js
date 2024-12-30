@@ -71,8 +71,20 @@ function key(event){
     }
 }
 
-    let tp=document.querySelector('.tp');
- tp.addEventListener("afterprint", (event) => {
-    console.log("After print");
-  });
-  
+
+//form Event Listener
+
+let form=document.querySelector('form');
+
+form.addEventListener('submit',function(event){
+    event.preventDefault();
+    console.log("form was submitted");
+
+    // let user = document.querySelector('#user');
+    // let pass= document.querySelector('#pass');
+    let user=this.elements[0];
+    let pass=this.elements[1];
+
+    alert(`Hii ${user.value},you pass set to be ${pass.value}`);
+
+});
