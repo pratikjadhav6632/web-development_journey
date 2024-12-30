@@ -88,3 +88,17 @@ form.addEventListener('submit',function(event){
     alert(`Hii ${user.value},you pass set to be ${pass.value}`);
 
 });
+
+//change and input event
+
+let text=document.querySelector('#text');
+
+text.addEventListener("change",function(){
+    console.log("input changed");
+    console.log(text.value);
+})
+
+
+text.addEventListener("input",function(){
+    console.log(text.value);
+})
