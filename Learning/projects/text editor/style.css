@@ -1,0 +1,31 @@
+body{
+    background-color: antiquewhite;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+}
+
+h1{
+    text-align: center;
+    justify-content: center;
+    color: rgb(204, 103, 73);
+    text-shadow: -10px 5px 15px;
+}
+p{
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#inp{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    border: none;
+    padding: 10px;
+
+}
