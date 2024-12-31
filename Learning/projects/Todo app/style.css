@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(48, 48, 48);
+    color: white;
+    
+}
+h1{
+    color:yellow;
+    text-align: center;
+    text-shadow: -18px 5px 10px rgb(255, 184, 5);
+}
+div{
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    
+}
+#button{
+    background-color: green;
+    color: white;
+    padding: 5px;
+    margin: auto;
+}
+#inp{
+    border: none;
+    padding: 5px;
+    margin-left: 70px;
+
+    
+}
+
+.delBtn{
+    background-color: rgb(49, 47, 47);
+    color: white;
+    margin-left: 30px;
+    border: none;
+
+}
