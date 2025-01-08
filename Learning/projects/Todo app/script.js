@@ -7,11 +7,16 @@ add.addEventListener("click",function(){
     let item=document.createElement("li");
     item.innerText=inp.value;
 
+    let date=document.createElement('input')
+    date.type="date";
+    date.style="margin:1rem"
+
     let delBtn=document.createElement('button');
     delBtn.innerText="remove ❌";
     delBtn.classList.add('Delete');
     delBtn.classList.add('delBtn');
 
+    item.appendChild(date);
     item.appendChild(delBtn);
     ul.appendChild(item);
     inp.value="";
