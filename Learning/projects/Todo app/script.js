@@ -11,11 +11,17 @@ add.addEventListener("click",function(){
     date.type="date";
     date.style="margin:1rem"
 
+    let time=document.createElement('input')
+    time.type="time";
+    time.style="margin:1rem"
+
+
     let delBtn=document.createElement('button');
     delBtn.innerText="remove ❌";
     delBtn.classList.add('Delete');
     delBtn.classList.add('delBtn');
 
+    item.appendChild(time);
     item.appendChild(date);
     item.appendChild(delBtn);
     ul.appendChild(item);
