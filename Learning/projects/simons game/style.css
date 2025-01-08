@@ -18,15 +18,23 @@ body{
     display: flex;
     justify-content: center;
 }
-.btn1{
+.red{
     background-color: rgb(225, 116, 116);
 }
-.btn2{
+.blue{
     background-color: rgb(116, 194, 225);
 }
-.btn3{
+.orange{
     background-color: rgb(228, 118, 39);
 }
-.btn4{
+.purple{
     background-color: rgb(127, 116, 225);
+}
+
+.flash{
+    background-color: white;
+}
+
+.userflash{
+    background-color: green;
 }
