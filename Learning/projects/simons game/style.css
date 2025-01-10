@@ -1,40 +1,46 @@
-body{
+body {
     text-align: center;
 
 }
-.btn{
+
+.btn {
     height: 200px;
     width: 200px;
     border: 1px solid black;
     border-radius: 20%;
     margin: 2rem;
 }
-.liner-1{
+
+.liner-1 {
     display: flex;
     justify-content: center;
 }
 
-.liner-2{
+.liner-2 {
     display: flex;
     justify-content: center;
 }
-.red{
+
+.red {
     background-color: rgb(225, 116, 116);
 }
-.blue{
+
+.blue {
     background-color: rgb(116, 194, 225);
 }
-.orange{
+
+.orange {
     background-color: rgb(228, 118, 39);
 }
-.purple{
+
+.purple {
     background-color: rgb(127, 116, 225);
 }
 
-.flash{
+.flash {
     background-color: white;
 }
 
-.userflash{
+.userflash {
     background-color: green;
 }
