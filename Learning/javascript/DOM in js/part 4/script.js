@@ -74,4 +74,29 @@ saveDB("data 1 save")
         console.log("Promises error:", error);
     });
 
-    
+//Apply all promises method to change h1 color
+
+let h1=document.querySelector("h1");
+h1.style.color=changeColor();
+
+function changeColor(changecolor,delay){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            h1.style.color=changecolor;
+            resolve("color changed");
+        },delay);
+    });
+}
+changeColor("red",1000)
+    .then(()=>{
+        return changeColor("Yellow",1000);
+    })
+    .then(()=>{
+       return changeColor("orange",1000);
+    })
+    .then(()=>{
+       return  changeColor("pink",1000);
+    })
+    .catch(()=>{
+        console.log("color not changes error occured");
+    })
