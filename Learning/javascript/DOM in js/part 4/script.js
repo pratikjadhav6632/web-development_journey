@@ -42,18 +42,36 @@ saveDB("apna collge2")
 //promise chaining
 
 saveDB("DEMO data 1")
-    .then(()=>{
+    .then(() => {
         console.log("Data 1 saved");
         return saveDB("DEMO data 2");
     })
-    .then(()=>{
+    .then(() => {
         console.log("Data 2 saved");
         return saveDB("DEMO data 3");
     })
-    .then(()=>{
+    .then(() => {
         console.log("Data 3 saved");
     })
-    .catch(()=>{
+    .catch(() => {
         console.log("Promise was rejected");
     });
+
+
+//reject and resolve
+
+saveDB("data 1 save")
+    .then((result) => {
+        console.log("Data 2 saved");
+        console.log("prommises result", result);
+    })
+    .then((result) => {
+        console.log("Data 3 saved");
+        console.log("promises result:", result);
+    })
+    .catch((error) => {
+        console.log("Weak connection ");
+        console.log("Promises error:", error);
+    });
+
     
