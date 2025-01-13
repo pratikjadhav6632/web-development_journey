@@ -7,6 +7,7 @@ let print = function (el){
 }
 
 arr.forEach(print);
+console.log(arr.length);
 
 let arr_obj=[{
     name:'Aman',

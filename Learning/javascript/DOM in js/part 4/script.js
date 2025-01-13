@@ -99,4 +99,4 @@ changeColor("red",1000)
     })
     .catch(()=>{
         console.log("color not changes error occured");
-    })
+    });
