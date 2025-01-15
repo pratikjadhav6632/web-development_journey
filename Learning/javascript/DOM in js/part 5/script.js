@@ -6,3 +6,9 @@ async function greet() {
 
 greet();
 
+//async Arrow function
+let hello=async ()=>{
+    console.log('Hello');
+}
+hello();
+
