@@ -33,3 +33,24 @@ async function demo(){
     await changeColor("yellow",1000);
 }
 demo();
+
+
+function getNum(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            let num=Math.floor(Math.random()*10)+1;
+            console.log(num);
+            resolve("Succegully num generated");
+        },1000);
+    });
+}
+
+async function demo2(){
+    await getNum();
+    await getNum();
+    await getNum();
+    await getNum();
+    await getNum();
+}
+
+demo2();
