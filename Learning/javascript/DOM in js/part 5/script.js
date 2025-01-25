@@ -108,3 +108,20 @@ async function demo3(){
 
 }
 demo3();
+
+//JSON 
+
+//Accessing data from json
+    //JSON.Parse.
+    let cat='{"fact":"Cats make about 100 different sounds. Dogs make only about 10.","length":62}';
+
+    let validateJson=JSON.parse(cat);
+    console.log(validateJson);
+
+    //JSON.stringify(json).
+    let jsonObj={
+        name:"pratik",
+        age:19,
+    };
+    let con_Obj_Json=JSON.stringify(jsonObj);
+    console.log(con_Obj_Json);
