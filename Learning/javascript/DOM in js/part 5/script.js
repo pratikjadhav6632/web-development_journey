@@ -125,3 +125,12 @@ demo3();
     };
     let con_Obj_Json=JSON.stringify(jsonObj);
     console.log(con_Obj_Json);
+
+//Https Verbs.
+
+    /*
+        GET //For recing information
+        POST //For sending inforamation
+        DELETE //For deleting information
+    */
+
