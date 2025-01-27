@@ -8,3 +8,12 @@ const sub = (a, b) => {
 
 PI = 3.14;
 g = 9.8;
+
+const obj={
+    sum:sum,
+    sub:sub,
+    PI:PI,
+    g:g
+};
+
+module.exports=obj;
