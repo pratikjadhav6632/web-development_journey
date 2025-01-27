@@ -4,3 +4,4 @@ const Lambo={
     Number:"0707"
 };
 
+module.exports=Lambo;

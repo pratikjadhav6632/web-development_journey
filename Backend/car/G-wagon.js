@@ -3,3 +3,4 @@ const G_wagon={
     color:"Black",
     Number:"0707"
 };
+module.exports=G_wagon;

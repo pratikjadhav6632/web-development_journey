@@ -4,3 +4,4 @@ const ferari={
     Number:"0707"
 };
 
+module.exports=ferari;

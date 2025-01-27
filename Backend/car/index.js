@@ -6,4 +6,4 @@ let cars = [lambo, G_wagon, ferari];
 
 module.exports = cars;
 
-console.log(lambo.name);
+console.log("Car details are:");
