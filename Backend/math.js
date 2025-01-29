@@ -1,13 +1,13 @@
-const sum = (a, b) => {
+export const sum = (a, b) => {
     return a + b;
 }
 
-const sub = (a, b) => {
+export const sub = (a, b) => {
     return a - b;
 }
 
-PI = 3.14;
-g = 9.8;
+export const PI = 3.14;
+export const g = 9.8;
 
 const obj={
     sum:sum,
@@ -16,4 +16,4 @@ const obj={
     g:g
 };
 
-module.exports=obj;
+// module.exports=obj;
