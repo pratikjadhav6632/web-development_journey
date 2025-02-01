@@ -24,7 +24,7 @@ app.listen(port,()=>{
 });*/
 
 
-//app.get
+//app.get (Routing)
 app.get("/",(req,res)=>{
     res.send("App contacted to root");
 });
@@ -41,3 +41,5 @@ app.get("/mango",(req,res)=>{
 app.get("*",(req,res)=>{
     res.send("Page not found");
 });
+
+
