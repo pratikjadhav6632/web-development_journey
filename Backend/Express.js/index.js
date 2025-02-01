@@ -29,7 +29,7 @@ app.get("/",(req,res)=>{
     res.send("App contacted to root");
 });
 
-app.get("/apple",(req,res)=>{
+/*app.get("/apple",(req,res)=>{
     res.send("App contacted to apple page");
 });
 
@@ -41,5 +41,12 @@ app.get("/mango",(req,res)=>{
 app.get("*",(req,res)=>{
     res.send("Page not found");
 });
+*/
 
+//Path parameter (req,params)
+app.get("/:username/:Id",(req,res)=>{
+    let {username,Id}=req.params;
+    let user=`<h1>Welcome to page of @${username}.</h1>`;
+    res.send(user);
+});
 
