@@ -44,9 +44,19 @@ app.get("*",(req,res)=>{
 */
 
 //Path parameter (req,params)
-app.get("/:username/:Id",(req,res)=>{
+/*app.get("/:username/:Id",(req,res)=>{
     let {username,Id}=req.params;
     let user=`<h1>Welcome to page of @${username}.</h1>`;
     res.send(user);
-});
+});*/
 
+//Query string (req.query)
+
+app.get("/search",(req,res)=>{
+    let {q}=req.query;
+    if(!q){
+        res.send("Nothing searched");
+    }
+    res.send(`<h1>These are the result for:${q}</h1>`);
+    console.log("sucess")
+});
