@@ -3,14 +3,16 @@
     height: 100px;
     background-color: aliceblue;
     border-radius:50%;
-    border: 5px solid rgb(0, 0, 0);
+    border: 5px solid rgb(40, 23, 23);
     border-top: 5px solid rgb(251, 0, 0);
     position: absolute;
     top: 50%;
     left: 50%;
     animation: loader 3s ease-in 0s infinite normal;
 }
-
+.loader:hover{
+    height: 200px;
+}
 @keyframes loader {
     from{
         
