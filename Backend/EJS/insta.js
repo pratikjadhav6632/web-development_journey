@@ -5,6 +5,8 @@ const path = require("path");
 const port = 8080;
 app.set("view engine", "ejs");
 
+//Create a basic template for instagram page based on following route:
+        // /ig/:username
 app.listen(port, () => {
     console.log(`Listening port ${port}`);
 });
