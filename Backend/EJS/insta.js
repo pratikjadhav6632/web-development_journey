@@ -12,6 +12,7 @@ app.listen(port, () => {
 });
 
 app.get("/ig/:username", (req,res) => {
+    const followers=["ajay","bob","mike","jai","raj"];
     let { username } = req.params;
-    res.render("insta.ejs", { username });
+    res.render("insta.ejs", { username,followers});
 });

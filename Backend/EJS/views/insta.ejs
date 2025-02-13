@@ -12,9 +12,15 @@
     <div style="display: flex; gap: 10px;">
     <div style="height: 100px; width: 100px; border-radius: 50%; background-color: gray;"></div>
     <div style="display: flex; margin-top: 25px;gap: 20px;">
-    <button style="height: 20px;">FOllow</button>
+    <button style="height: 20px;">Follow</button>
     <button style="height: 20px;">Message</button>
 </div>
 </div>
+<h1>Accounts that follows you</h1>
+    <ul>
+        <% for(let name of followers){ %>
+            <li><%=name%></li>
+            <% } %>
+    </ul>
 </body>
 </html>
