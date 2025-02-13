@@ -8,5 +8,9 @@
 <body>
     <!--getting data from server or database-->
     <h1>Your dice gave value:<%= diceVal%></h1>
+    <!--Conditional statement in EJS-->
+    <%if(diceVal==6){%>
+    <h2>Nice!,Roll dice again.</h2>
+    <%}%>
 </body>
 </html>
