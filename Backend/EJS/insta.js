@@ -12,8 +12,8 @@ app.listen(port, () => {
 });
 
 app.get("/ig/:username", (req,res) => {
-    const instaData=require("./data.json");
     const {username}=req.params;
+    const instaData=require("./data.json");
     const data=instaData[username];
     if(data){
 

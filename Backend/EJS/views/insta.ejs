@@ -6,15 +6,20 @@
     <title>insta</title>
     <style>
         img{
-            height: 100px;
-            width: 100px;
+            height: 300px;
+            width: 400px;
+        }
+        .post{
             display: flex;
+            justify-content: space-around;
+           
         }
     </style>
 </head>
 <body>
     <!--Create a basic template for instagram page based on following route:
                 /ig/:username-->
+                <h1><%=data.name%></h1>
     <div style="display: flex; gap: 10px;">
     <div style="height: 100px; width: 100px; border-radius: 50%; background-color: gray;"></div>
     <div style="display: flex; margin-top: 25px;gap: 20px;">
@@ -27,8 +32,10 @@
 <hr>
     <div class="post">
         <%for(let post of data.posts){%>
+            <div class="post-n">
         <img src="<%=post.image%>" alt="some post">
         <p>Likes:<%=post.likes%> &nbsp; &nbsp; &nbsp;Comments:<%=post.comments%></p>
+    </div>
         <%}%>
     </div>    
 </body>
