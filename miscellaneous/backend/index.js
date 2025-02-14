@@ -8,11 +8,11 @@ app.listen(port,()=>{
 });
 
 app.get("/register",(req,res)=>{
-    // let {user,password}=req.params;
-    res.send(`Standard get method,Welcome`);
+     let {user,password}=req.query;
+    res.send(`Standard get method,Welcome ${user}`);
 });
 
 app.post("/register",(req,res)=>{
-    // let {user,password}=req.params;
-    res.send(`Standard post method,Welcome`);
+    let {user,password}=req.query;
+    res.send(`Standard post method,Welcome ${user}`);
 });
