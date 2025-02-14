@@ -10,7 +10,9 @@ app.set("view engine", "ejs");
 app.listen(port, () => {
     console.log(`Listening port ${port}`);
 });
-
+app.set("views",path.join(__dirname,"/views"));
+app.use(express.static(path.join(__dirname,"public/css")))
+app.use(express.static(path.join(__dirname,"public/js")))
 app.get("/ig/:username", (req,res) => {
     const {username}=req.params;
     const instaData=require("./data.json");
