@@ -16,7 +16,6 @@ app.get("/ig/:username", (req,res) => {
     const instaData=require("./data.json");
     const data=instaData[username];
     if(data){
-
         res.render("insta.ejs",{data});
     }else{
         res.render("error.ejs");
