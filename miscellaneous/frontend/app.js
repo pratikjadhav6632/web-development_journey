@@ -49,8 +49,10 @@ class Student{
         this.name=name;
         this.std=std;
         this.age=age;
+        // this.school=school;
     };
     school(){
+        console.log(`My school is ${name}`);
     }
 };
 
