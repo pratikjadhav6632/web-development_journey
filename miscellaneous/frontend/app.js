@@ -28,7 +28,7 @@ let P1=new Person("raj",32);
 let P2=new Person("keshav",52);
 console.log(P1.talk===P2.talk);
 
-//Classes
+//Classes- we prefer classes over constructors & factory functon. Classes is developers firsr choice...
 
 class Person2{
     constructor(name,age){
