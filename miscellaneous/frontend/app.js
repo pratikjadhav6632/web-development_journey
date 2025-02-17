@@ -27,3 +27,20 @@ Person.prototype.talk=function(){
 let P1=new Person("raj",32);
 let P2=new Person("keshav",52);
 console.log(P1.talk===P2.talk);
+
+//Classes
+
+class Person2{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    talk(){
+        console.log(`Hey i am ${this.name}`);
+    }
+}
+let person1=new Person2("riya",21);
+let person2=new Person2("priya",21);
+
+console.log(person1.talk===person2.talk);
+
