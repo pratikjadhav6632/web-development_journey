@@ -49,12 +49,12 @@ class Student{
         this.name=name;
         this.std=std;
         this.age=age;
-        // this.school=school;
+        this.school=school;
     };
     school(){
-        console.log(`My school is ${name}`);
+        console.log(`hey My school is ${school}`)
     }
 };
 
-let S1=new Student("Jay","F.Y",19,"SVPM");
+let S1=new Student("Jay","F.Y",19);
 
