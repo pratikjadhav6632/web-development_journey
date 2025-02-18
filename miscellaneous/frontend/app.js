@@ -41,7 +41,6 @@ class Person2 {
 }
 let person1 = new Person2("riya", 21);
 let person2 = new Person2("priya", 21);
-
 console.log(person1.talk === person2.talk);
 
 class Student{
@@ -57,4 +56,3 @@ class Student{
 };
 
 let S1=new Student("Jay","F.Y",19);
-

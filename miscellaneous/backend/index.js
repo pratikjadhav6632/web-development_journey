@@ -20,3 +20,9 @@ app.post("/register",(req,res)=>{
     let {user,password}=req.body;
     res.send(`Standard post method,Welcome ${user}`);
 });
+
+app.post("/login",(req,res)=>{
+    console.log(req.body);
+    let {user,password}=req.body;
+    res.send(`hey Welcome again${user}`);
+})
