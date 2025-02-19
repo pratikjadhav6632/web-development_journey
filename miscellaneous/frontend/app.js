@@ -56,3 +56,33 @@ class Student{
 };
 
 let S1=new Student("Jay","F.Y",19);
+
+//Inheritance
+class Persons{  //Parent class OR basic class
+    constructor(name,age){
+        console.log("Person class is called");
+        this.name=name;
+        this.age=age;
+    }
+    talk(){  //all child class can access this function
+        console.log(`Hello i am ${name}`);
+    }
+}
+class Students extends Persons{  //Child class
+    constructor(name,age,mark){
+        console.log("Student class is called");
+        super(name,age);
+        this.mark=mark;
+    }
+}
+
+class Teachers extends Persons{  //child class
+    constructor(name,age,subject){
+        console.log("Student class is called");
+        super(name,age);       
+        this.subject=subject;
+    }
+    talk(){  //this function overrides parent class function
+        console.log(`hello i am ${this.subject} teacher`);
+    }
+}
