@@ -58,6 +58,8 @@ class Student{
 let S1=new Student("Jay","F.Y",19);
 
 //Inheritance
+
+//Example 1:
 class Persons{  //Parent class OR basic class
     constructor(name,age){
         console.log("Person class is called");
@@ -84,5 +86,36 @@ class Teachers extends Persons{  //child class
     }
     talk(){  //this function overrides parent class function
         console.log(`hello i am ${this.subject} teacher`);
+    }
+}
+
+//Example 2:
+
+class Mamamls{
+    constructor(name,food){
+        this.name=name;
+        this.type="warm-Blooded";
+    }
+    eat(){
+        console.log(`I am eating ${this.food}`);
+    }
+}
+class Dogs extends Mamamls{
+    constructor(name,food){
+        super(name,food);
+        this.food=food;
+    }
+    bark(){
+        console.log("booff....");
+    }
+}
+
+class Cats extends Mamamls{
+    constructor(name,food){
+        super(name,food);
+        this.food=food;
+    }
+    Meow(){
+        console.log("Meooww....");
     }
 }
