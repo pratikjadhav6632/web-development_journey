@@ -10,7 +10,8 @@ const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 
 // Middleware to parse URL-encoded data
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 
 // Set the views directory
@@ -67,10 +68,13 @@ app.get("/posts/:id", (req, res) => {
     res.render("show.ejs", { post });
 });
 
-app.patch("/posts/:id", (req, res) => {
-    let {id}=req.params;
-    console.log(id);
-    let newCont=req.body.content;
-    console.log(newCont);
+    app.put("/posts/:id", (req, res) => {
+        let { id } = req.params;
+        let newContent = req.body.content; 
+        console.log("New Content:", newContent);
+        console.log(id);
+        let post = posts.find((p) => id === p.id);
+        post.content=newContent;
+        console.log(post);
     res.send("Post updated successfully");
 });
