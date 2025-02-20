@@ -6,12 +6,12 @@ const app = express();
 const port = 8080;
 // Import the path module
 const path = require("path");
-//import uuid module
+// Import uuid module
 const { v4: uuidv4 } = require('uuid');
-
 
 // Middleware to parse URL-encoded data
 app.use(express.urlencoded({ extended: true }));
+
 
 // Set the views directory
 app.set("views", path.join(__dirname, "/views"));
@@ -21,7 +21,7 @@ app.set("view engine", "ejs");
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, "public")));
 
-//adding demo data 
+// Adding demo data 
 let posts = [
     {
         id: uuidv4(),
@@ -39,6 +39,7 @@ let posts = [
         content: "Finally i got an internship.."
     }
 ];
+
 // Start the server and listen on the defined port
 app.listen(port, () => {
     console.log(`Listening port ${port}`);
@@ -52,15 +53,24 @@ app.get("/posts", (req, res) => {
 app.get("/posts/new", (req, res) => {
     res.render("new.ejs");
 });
+
 app.post("/posts", (req, res) => {
     let { username, content } = req.body;
-    let id=uuidv4();
-    posts.push({ id,username, content });
+    let id = uuidv4();
+    posts.push({ id, username, content });
     res.redirect("/posts");
-})
+});
 
 app.get("/posts/:id", (req, res) => {
     let { id } = req.params;
-    let post = posts.find((p) => id === p.id );
-     res.render("show.ejs", { post });
-})
+    let post = posts.find((p) => id === p.id);
+    res.render("show.ejs", { post });
+});
+
+app.patch("/posts/:id", (req, res) => {
+    let {id}=req.params;
+    console.log(id);
+    let newCont=req.body.content;
+    console.log(newCont);
+    res.send("Post updated successfully");
+});
