@@ -19,18 +19,21 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 //adding demo data 
-let posts=[
+let posts = [
     {
-        username:"ajay",
-        content:"I am Ajay i Got new Opportunity at MNC"
+        id: "1a",
+        username: "ajay",
+        content: "I am Ajay i Got new Opportunity at MNC"
     },
     {
-        username:"keshav",
-        content:"Hard work pay off.."
+        id: "2a",
+        username: "keshav",
+        content: "Hard work pay off.."
     },
     {
-        username:"Riya",
-        content:"Finally i got an internship.."
+        id: "3a",
+        username: "Riya",
+        content: "Finally i got an internship.."
     }
 ];
 // Start the server and listen on the defined port
@@ -40,14 +43,20 @@ app.listen(port, () => {
 
 // Define a route for the root URL
 app.get("/posts", (req, res) => {
-    res.render("index.ejs",{posts});
+    res.render("index.ejs", { posts });
 });
 
 app.get("/posts/new", (req, res) => {
     res.render("new.ejs");
 });
-app.post("/posts",(req,res)=>{
-    let {username,content}=req.body;
-    posts.push({username,content});
+app.post("/posts", (req, res) => {
+    let { username, content } = req.body;
+    posts.push({ username, content });
     res.redirect("/posts");
+})
+
+app.get("/posts/:id", (req, res) => {
+    let { id } = req.params;
+    let post = posts.find((p) => id === p.id );
+     res.render("show.ejs", { post });
 })
