@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+
+}
+h1{
+    color: white;
+    text-align: center;
+}
+.post-form{
+    background-color:  rgb(153, 148, 148);
+    width: 300px;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+.form{
+    margin-left: 30px;
+}
+label{
+    font-size: 18px;
+    color: maroon;
+    font-weight: 700;
+}
+input{
+    border-radius: 8px;
+    padding: 5px;
+
+}
+textarea{
+    width: 200px;
+    height: 100px;
+    padding:10px;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+.post-btn{
+    color: white;
+    background-color: #7fc8ff;
+    margin-left: 30%;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 23px
+
+}
