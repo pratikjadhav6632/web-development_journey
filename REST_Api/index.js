@@ -24,17 +24,17 @@ app.use(express.static(path.join(__dirname, "public")));
 //adding demo data 
 let posts = [
     {
-        id: "1a",
+        id: uuidv4(),
         username: "ajay",
         content: "I am Ajay i Got new Opportunity at MNC"
     },
     {
-        id: "2a",
+        id: uuidv4(),
         username: "keshav",
         content: "Hard work pay off.."
     },
     {
-        id: "3a",
+        id: uuidv4(),
         username: "Riya",
         content: "Finally i got an internship.."
     }
@@ -54,7 +54,8 @@ app.get("/posts/new", (req, res) => {
 });
 app.post("/posts", (req, res) => {
     let { username, content } = req.body;
-    posts.push({ username, content });
+    let id=uuidv4();
+    posts.push({ id,username, content });
     res.redirect("/posts");
 })
 

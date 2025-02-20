@@ -35,3 +35,7 @@ h1{
 .user{
     font-style: italic;
 }
+.id{
+    font-size: 16px;
+    font-weight: 200;
+}
