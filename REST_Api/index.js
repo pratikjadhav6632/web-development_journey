@@ -12,7 +12,7 @@ const { v4: uuidv4 } = require('uuid');
 const methodOverride = require('method-override')
 
 // Middleware to parse URL-encoded data
- app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // override with POST having ?_method=PUT
@@ -31,7 +31,7 @@ let posts = [
     {
         id: uuidv4(),
         username: "ajay",
-        content: "I am Ajay i Got new Opportunity at MNC"
+        content: "I am Ajay i Got new Opportunity at MNC",
     },
     {
         id: uuidv4(),
@@ -83,13 +83,13 @@ app.patch("/posts/:id", (req, res) => {
     res.redirect("/posts");
 });
 
-app.get("/posts/:id/edit",(req,res)=>{
+app.get("/posts/:id/edit", (req, res) => {
     let { id } = req.params;
     let post = posts.find((p) => id === p.id);
     console.log(post);
-    res.render("edit.ejs",{post});
+    res.render("edit.ejs", { post });
 });
-app.delete("/posts/:id",(req,res)=>{
+app.delete("/posts/:id", (req, res) => {
     let { id } = req.params;
     posts = posts.filter((p) => id !== p.id);
     res.redirect('/posts');

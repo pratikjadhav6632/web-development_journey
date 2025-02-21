@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,20 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/new.css">
 </head>
+
 <body>
     <h1>Edit your post</h1>
     <div class="edit-form">
-    <h3>post id:<span class="id"><%=post.id%></span></h3>
-    <h3 class="user">@<%=post.username%></h3>
+        <h3>post id:<span class="id">
+                <%=post.id%>
+            </span></h3>
+        <h3 class="user">@<%=post.username%>
+        </h3>
         <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
-           <textarea name="content" rows="10" cols="30" > <%=post.content%></textarea>
-           <button class="post-btn">Post</button>
+            <textarea name="content" rows="10" cols="30"> <%=post.content%></textarea>
+            <button class="post-btn">Post</button>
         </form>
     </div>
 </body>
+
 </html>

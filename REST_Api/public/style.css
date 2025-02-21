@@ -1,28 +1,32 @@
-body{
+body {
     background-color: rgb(24, 23, 23);
     margin: 0px;
     padding: 0px;
 }
-nav{
+
+nav {
     background-color: black;
     padding: 6px;
     margin-bottom: 30px;
 }
-h1{
+
+h1 {
     text-align: center;
-    color:maroon
+    color: maroon
 }
-.createN-btn{
-    background-color:rgb(143, 143, 238);
+
+.createN-btn {
+    background-color: rgb(143, 143, 238);
     color: white;
     padding: 8px;
-    margin-left:47%;
+    margin-left: 47%;
     margin-top: 20px;
     margin-bottom: 20px;
     border: 1px solid white;
     border-radius: 8px;
 }
-.box{
+
+.box {
     background-color: rgb(153, 148, 148);
     width: 400px;
     margin: auto;
@@ -32,15 +36,17 @@ h1{
     margin-top: 5px;
 
 }
-.user{
+
+.user {
     font-style: italic;
 }
-.id{
+
+.id {
     font-size: 16px;
     font-weight: 200;
 }
 
-.edit-form{
+.edit-form {
     height: 400px;
     width: 300px;
     padding: 20px;
@@ -49,7 +55,8 @@ h1{
     border-radius: 8px;
     margin: auto;
 }
-.btns{
+
+.btns {
     display: flex;
     justify-content: space-around;
 }
