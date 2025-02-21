@@ -49,3 +49,7 @@ h1{
     border-radius: 8px;
     margin: auto;
 }
+.btns{
+    display: flex;
+    justify-content: space-around;
+}
