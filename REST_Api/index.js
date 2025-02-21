@@ -68,13 +68,19 @@ app.get("/posts/:id", (req, res) => {
     res.render("show.ejs", { post });
 });
 
-    app.put("/posts/:id", (req, res) => {
-        let { id } = req.params;
-        let newContent = req.body.content; 
-        console.log("New Content:", newContent);
-        console.log(id);
-        let post = posts.find((p) => id === p.id);
-        post.content=newContent;
-        console.log(post);
+app.put("/posts/:id", (req, res) => {
+    let { id } = req.params;
+    let newContent = req.body.content;
+    console.log("New Content:", newContent);
+    console.log(id);
+    let post = posts.find((p) => id === p.id);
+    post.content = newContent;
+    console.log(post);
     res.send("Post updated successfully");
+});
+
+app.get("posts/:id/edit",(req,res)=>{
+    let { id } = req.params;
+    let post = posts.find((p) => id === p.id);
+    res.render("edit.ejs");
 });
