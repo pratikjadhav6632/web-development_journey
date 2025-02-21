@@ -72,7 +72,7 @@ app.get("/posts/:id", (req, res) => {
     res.render("show.ejs", { post });
 });
 
-app.put("/posts/:id", (req, res) => {
+app.patch("/posts/:id", (req, res) => {
     let { id } = req.params;
     let newContent = req.body.content;
     console.log("New Content:", newContent);
@@ -80,7 +80,6 @@ app.put("/posts/:id", (req, res) => {
     let post = posts.find((p) => id === p.id);
     post.content = newContent;
     console.log(post);
-    res.send("Post updated successfully");
     res.redirect("/posts");
 });
 
@@ -88,5 +87,10 @@ app.get("/posts/:id/edit",(req,res)=>{
     let { id } = req.params;
     let post = posts.find((p) => id === p.id);
     console.log(post);
-    res.render("edit.ejs");
+    res.render("edit.ejs",{post});
+});
+app.delete("/posts/:id",(req,res)=>{
+    let { id } = req.params;
+    posts = posts.filter((p) => id !== p.id);
+    res.redirect('/posts');
 });

@@ -18,8 +18,13 @@
             <div class="box-data">
             <h3 class="user">@<%=post.username%></h3>
            <p class="content"><%=post.content%></p> 
+           <div class="btns">
            <a href="http://localhost:8080/posts/<%=post.id%>">View in detail</a>
            <a href="http://localhost:8080/posts/<%=post.id%>/edit">Edit</a>
+           <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+            <button>Delete Post</button>
+           </form>
+        </div>
         </div>
         </div>
      <% } %>
