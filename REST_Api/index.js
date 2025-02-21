@@ -8,11 +8,15 @@ const port = 8080;
 const path = require("path");
 // Import uuid module
 const { v4: uuidv4 } = require('uuid');
+//Import method-override module
+const methodOverride = require('method-override')
 
 // Middleware to parse URL-encoded data
-// app.use(express.urlencoded({ extended: true }));
+ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// override with POST having ?_method=PUT
+app.use(methodOverride('_method'))
 
 // Set the views directory
 app.set("views", path.join(__dirname, "/views"));
@@ -77,10 +81,12 @@ app.put("/posts/:id", (req, res) => {
     post.content = newContent;
     console.log(post);
     res.send("Post updated successfully");
+    res.redirect("/posts");
 });
 
-app.get("posts/:id/edit",(req,res)=>{
+app.get("/posts/:id/edit",(req,res)=>{
     let { id } = req.params;
     let post = posts.find((p) => id === p.id);
+    console.log(post);
     res.render("edit.ejs");
 });
