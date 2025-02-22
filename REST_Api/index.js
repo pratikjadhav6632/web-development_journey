@@ -20,6 +20,7 @@ app.use(methodOverride('_method'))
 
 // Set the views directory
 app.set("views", path.join(__dirname, "/views"));
+
 // Set the view engine to ejs
 app.set("view engine", "ejs");
 
@@ -89,6 +90,7 @@ app.get("/posts/:id/edit", (req, res) => {
     console.log(post);
     res.render("edit.ejs", { post });
 });
+
 app.delete("/posts/:id", (req, res) => {
     let { id } = req.params;
     posts = posts.filter((p) => id !== p.id);
