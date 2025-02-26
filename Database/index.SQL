@@ -81,3 +81,12 @@ SELECT min(followers) FROM user;/*MIN*/
 
 /*GROUP BY Clause*/
 SELECT age,count(age) FROM user GROUP BY age;
+
+/*Genral Order*/
+SELECT age,max(followers)
+ FROM user 
+ GROUP BY age 
+ HAVING max(followers)>300
+ ORDER BY age ASC;
+
+ 
