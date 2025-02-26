@@ -64,3 +64,6 @@ select name,age,followers,email from user where email in('abhi26@gmail.com','sam
 select name,email,followers from user where age<20 and followers<400;/*AND operator*/
 select name,email,age,followers from user where age>20 or followers>500;/*OR operator*/
 select name,age,followers,email from user where email Not in('abhi26@gmail.com','samay69@gmail.com','abc@gmail.com');/*NOT IN operator*/
+
+/*LIMIT CLAUSE*/
+SELECT name,age,email FROM user WHERE age > 18 LIMIT 2;
