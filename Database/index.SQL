@@ -67,3 +67,7 @@ select name,age,followers,email from user where email Not in('abhi26@gmail.com',
 
 /*LIMIT CLAUSE*/
 SELECT name,age,email FROM user WHERE age > 18 LIMIT 2;
+
+/*ORDER BY Clause*/
+SELECT name,age,email,followers FROM user ORDER BY age ASC; /*Ascending*/
+SELECT name,age,email,followers FROM user ORDER BY followers DESC;/*Descending*/
