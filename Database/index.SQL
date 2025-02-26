@@ -1,6 +1,6 @@
 create database Instagram; /*Create database*/
 
-use  instagram; /*connect DB*/
+use instagram; /*connect DB*/
 
 /*Create table user*/
 create table user(
@@ -16,6 +16,7 @@ create table post(
         content varchar(30),
         foreign key (user_id) references user(id)
         );
+
 /*Insert values into table*/   
 insert into user values(1,'ajay','ajay@gmail');
 insert into post values(1,'achivement','its my first achivement ');
@@ -35,10 +36,8 @@ alter table user add followers int;
 /*Alter  in user table add following  column*/
 alter table user add following int;
 
-
 /*Alter  in user table remove email column*/
 alter table user drop column email;
-
 
 /*Alter  in user table add email column*/
 alter table user add email varchar(30);
@@ -59,7 +58,7 @@ values(2,'kishor',18,300,340,'kishor@gmail.com'),
 (4,'abhi',21,500,240,'abhi26@gmail.com'),
 (5,'riya',19,390,390,'riya2@gmail.com');
 
-/*perform frequentlu used operator operation using where clause*/
+/*perform frequently used operator operation using where clause*/
 select name,age,followers,email from user where id between 1 and 4; /*BETWEEN operator*/
 select name,age,followers,email from user where email in('abhi26@gmail.com','samay69@gmail.com','abc@gmail.com'); /*IN operator*/
 select name,email,followers from user where age<20 and followers<400;/*AND operator*/
