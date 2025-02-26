@@ -92,3 +92,26 @@ SELECT age,max(followers)
  HAVING max(followers)>300
  ORDER BY age ASC;
 
+/*RENAME Table name*/
+ALTER TABLE post RENAME TO insta_post;
+
+/*CHANGE Column name*/
+ALTER TABLE insta_post CHANGE COLUMN title Caption varchar(30);
+
+/*MODIFY column datatype*/
+ALTER TABLE insta_post MODIFY COLUMN content varchar(50);
+
+/*TRUNCATE command/query*/
+
+CREATE TABLE Guest_user( id int primary key,
+       name varchar(20),
+       email varchar(30));
+       
+insert into Guest_user 
+values(2,'kishor','kishor@gmail.com'),
+(3,'samay','samay69@gmail.com'),
+(4,'abhi','abhi26@gmail.com'),
+(5,'riya','riya2@gmail.com');
+SELECT * FROM Guest_user;
+/*DELETE table data*/
+TRUNCATE TABLE Guest_user ;
