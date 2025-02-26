@@ -45,8 +45,11 @@ alter table user add email varchar(30);
 /*update user table where id=1*/
 update user set age=14,followers=200,following=300 where id=1 ; 
 
-/*updat email where id=1*/
+/*update email where id=1*/
 update user set email="ajay@gmail.com" where id=1 ; 
+
+/*DELETE row where id=3*/
+ DELETE FROM user WHERE id=3;
 
 /*Display user table*/
 select * from user;
@@ -89,4 +92,3 @@ SELECT age,max(followers)
  HAVING max(followers)>300
  ORDER BY age ASC;
 
- 
