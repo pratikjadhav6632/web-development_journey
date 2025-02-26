@@ -71,3 +71,10 @@ SELECT name,age,email FROM user WHERE age > 18 LIMIT 2;
 /*ORDER BY Clause*/
 SELECT name,age,email,followers FROM user ORDER BY age ASC; /*Ascending*/
 SELECT name,age,email,followers FROM user ORDER BY followers DESC;/*Descending*/
+
+/*Aggregate Function*/
+SELECT sum(followers) FROM user; /*SUM*/
+SELECT avg(followers) FROM user;/*AVG*/
+SELECT count(age) FROM user WHERE age<20;/*COUNT*/
+SELECT max(followers) FROM user;/*MAX*/
+SELECT min(followers) FROM user;/*MIN*/
