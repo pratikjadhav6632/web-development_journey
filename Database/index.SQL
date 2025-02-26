@@ -78,3 +78,6 @@ SELECT avg(followers) FROM user;/*AVG*/
 SELECT count(age) FROM user WHERE age<20;/*COUNT*/
 SELECT max(followers) FROM user;/*MAX*/
 SELECT min(followers) FROM user;/*MIN*/
+
+/*GROUP BY Clause*/
+SELECT age,count(age) FROM user GROUP BY age;
