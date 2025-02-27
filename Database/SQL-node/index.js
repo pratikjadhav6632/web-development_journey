@@ -8,10 +8,15 @@ const connection = mysql.createConnection({
     database:'delta_app',
     password:'Pratik#07'
 });
+
+let a="CREATE TABLE user(id INT PRIMARY KEY,username VARCHAR(20) NOT NULL,email VARCHAR(30) UNIQUE NOT NULL,password VARCHAR(30) NOT NULL)";
+let q="SHOW TABLES";
 try {
-    connection.query("SELECT * FROM temp", (err, result) => {
+    connection.query(q,/*a,*/ (err, result) => {
         if (err) throw err;
         console.log(result);
+        // console.log(result.length);
+        // console.log(result[0]);
     });
 } catch (err) {
     console.log(err);
