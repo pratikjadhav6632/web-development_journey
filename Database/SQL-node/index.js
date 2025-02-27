@@ -34,14 +34,31 @@ try {
     console.log(err);
 }
 
-connection.end();
-let getRandomUser = () => {
-    return {
-        user_id: faker.string.uuid(),
-        username: faker.internet.username(),
-        email: faker.internet.email(),
-        password: faker.internet.password()
-    };
-};
 
+let getRandomUser = () => {
+    return [
+         faker.string.uuid(),
+         faker.internet.username(),
+        faker.internet.email(),
+         faker.internet.password()
+    ];
+};
+let data=[];
+let quer="INSERT INTO user (id,username,email,password)VALUES ?";
+for(i=1;i<=100;i++)
+{
+    data.push(getRandomUser());
+}
+
+try {
+        connection.query(quer,[data],(err, result) => {
+            if (err) throw err;
+            console.log(result);
+        });
+    } catch (err) {
+        console.log(err);
+    }
+    
 console.log(getRandomUser());
+
+connection.end();
