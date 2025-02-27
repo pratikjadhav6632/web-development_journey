@@ -15,12 +15,25 @@ try {
     connection.query(q,/*a,*/ (err, result) => {
         if (err) throw err;
         console.log(result);
-        // console.log(result.length);
-        // console.log(result[0]);
+        console.log(result.length);
+        console.log(result[0]);
     });
 } catch (err) {
     console.log(err);
 }
+
+let qu="INSERT INTO user (id,username,email,password)VALUES ?";
+let users=[["1","Kishor",'kishor@gmail.com','kishor@097'],
+           ['2','ajay','ajay@gmail.com','kishor@123']];
+try {
+    connection.query(qu,[users], (err, result) => {
+        if (err) throw err;
+        console.log(result);
+    });
+} catch (err) {
+    console.log(err);
+}
+
 connection.end();
 let getRandomUser = () => {
     return {
