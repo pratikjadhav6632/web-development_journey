@@ -34,7 +34,6 @@ try {
     console.log(err);
 }
 
-
 let getRandomUser = () => {
     return [
          faker.string.uuid(),
@@ -43,13 +42,13 @@ let getRandomUser = () => {
          faker.internet.password()
     ];
 };
+
 let data=[];
 let quer="INSERT INTO user (id,username,email,password)VALUES ?";
 for(i=1;i<=100;i++)
 {
     data.push(getRandomUser());
 }
-
 try {
         connection.query(quer,[data],(err, result) => {
             if (err) throw err;
@@ -60,5 +59,4 @@ try {
     }
     
 console.log(getRandomUser());
-
 connection.end();
