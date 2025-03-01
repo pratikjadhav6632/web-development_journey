@@ -122,6 +122,7 @@ app.post("/user/new", (req, res) => {
     }
 })
 
+//Create delete user route
 app.get("/user/:id/delete", (req, res) => {
     let {id}=req.params;
     let q =`SELECT * FROM user WHERE id='${id}'`;
@@ -137,6 +138,7 @@ app.get("/user/:id/delete", (req, res) => {
     }
 })
 
+//delete user 
 app.delete("/user/:id/delete", (req, res) => {
     let { password } = req.body;
     let { id } = req.params;
@@ -152,7 +154,7 @@ app.delete("/user/:id/delete", (req, res) => {
             connection.query(q2,(err,result)=>{
                 if(err) throw err;
                 // let user=result[0];
-                console.log(`Successfullu delted user`);
+                console.log(`Successfully delted user`);
                 res.redirect("/user");
             });
             }
