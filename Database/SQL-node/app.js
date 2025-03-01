@@ -100,27 +100,68 @@ app.patch("/user/:id", (req, res) => {
 });
 
 //create new route toadd new user
-app.get("/user/new",(req,res)=>{
-     res.render("new.ejs");
+app.get("/user/new", (req, res) => {
+    res.render("new.ejs");
 })
 
 //add new user
-app.post("/user/new",(req,res)=>{
-    let {username,email,password}=req.body;
-    let id=uuidv4();
+app.post("/user/new", (req, res) => {
+    let { username, email, password } = req.body;
+    let id = uuidv4();
 
-    let q=`INSERT INTO user (id,username,email,password)VALUES('${id}','${username}','${email}','${password}')`;
-    try{
-    connection.query(q,(err,result)=>{
-        if(err) throw err;
-        console.log(result);
-        res.redirect("/user");
-    })
-   }catch(err){
-    console.log(err);
-    res.send("ERROR!");
-   }
+    let q = `INSERT INTO user (id,username,email,password)VALUES('${id}','${username}','${email}','${password}')`;
+    try {
+        connection.query(q, (err, result) => {
+            if (err) throw err;
+            console.log(result);
+            res.redirect("/user");
+        })
+    } catch (err) {
+        console.log(err);
+        res.send("ERROR!");
+    }
 })
+
+app.get("/user/:id/delete", (req, res) => {
+    let {id}=req.params;
+    let q =`SELECT * FROM user WHERE id='${id}'`;
+    try{
+        connection.query(q,(err,result)=>{
+            if(err) throw err;
+            let user=result[0];
+            res.render("delete.ejs",{user});
+        })
+    }catch(err){
+        console.log(err);
+        res.send("ERROR!")
+    }
+})
+
+app.delete("/user/:id/delete", (req, res) => {
+    let { password } = req.body;
+    let { id } = req.params;
+    let q =`SELECT * FROM user WHERE id='${id}'`;
+    try {
+        connection.query(q, (err, result) => {
+            if (err) throw err;
+            let user = result[0];
+            if(user.password != password){
+                res.send("Wrong Password try again");
+            }else{
+            let q2=`DELETE FROM user WHERE id='${id}'`;
+            connection.query(q2,(err,result)=>{
+                if(err) throw err;
+                // let user=result[0];
+                console.log(`Successfullu delted user`);
+                res.redirect("/user");
+            });
+            }
+        })
+    } catch (err) {
+        console.log(err);
+        res.send("ERROR!");
+    }
+});
 
 app.listen(Port, (req, res) => {
     console.log(`Listening port ${Port}`);
