@@ -40,6 +40,7 @@ app.get("/", (req, res) => {
 
 })
 
+//Create User route to display users
 app.get("/user", (req, res) => {
     let q = `SELECT * FROM user`;
     try {
@@ -54,6 +55,8 @@ app.get("/user", (req, res) => {
         res.send("Error!")
     }
 })
+
+//create edit route
 app.get("/user/:id/edit", (req, res) => {
     let { id } = req.params;
     let q = `SELECT * FROM user WHERE id='${id}'`
@@ -69,6 +72,7 @@ app.get("/user/:id/edit", (req, res) => {
     }
 })
 
+//patch edited username
 app.patch("/user/:id", (req, res) => {
     let { id } = req.params;
     let { password: formPass, username: newUsername } = req.body;
@@ -95,9 +99,12 @@ app.patch("/user/:id", (req, res) => {
     // res.redirect("/user");
 });
 
+//create new route toadd new user
 app.get("/user/new",(req,res)=>{
      res.render("new.ejs");
 })
+
+//add new user
 app.post("/user/new",(req,res)=>{
     let {username,email,password}=req.body;
     let id=uuidv4();
@@ -114,6 +121,7 @@ app.post("/user/new",(req,res)=>{
     res.send("ERROR!");
    }
 })
+
 app.listen(Port, (req, res) => {
     console.log(`Listening port ${Port}`);
 });
