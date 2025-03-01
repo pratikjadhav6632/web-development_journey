@@ -33,6 +33,7 @@ app.get("/",(req,res)=>{
         });
     } catch (err) {
         console.log(err);
+        res.send("Error!")
     }
 
 })
@@ -41,12 +42,14 @@ app.get("/user",(req,res)=>{
     let q=`SELECT * FROM user`;
     try{
         connection.query(q,(err,result)=>{
+            if(err) throw err;
             // res.send(result);
             let users=result;
             res.render("user.ejs",{users});
         })
     }catch(err){
         console.log(err);
+        res.send("Error!")
     }
 })
 app.get("/user/:id/edit",(req,res)=>{
@@ -54,16 +57,40 @@ app.get("/user/:id/edit",(req,res)=>{
     let q=`SELECT * FROM user WHERE id='${id}'`
     try{
         connection.query(q,(err,result)=>{
+            if(err) throw err;
             let user=result[0];
             res.render("edit.ejs",{user});
         })
     }catch(err){
         console.log(err);
+        res.send("Error!")
     }
 })
 
 app.patch("/user/:id",(req,res)=>{
-    res.redirect("/user");
+    let {id}=req.params;
+    let{password:formPass,username:newUsername}=req.body;
+    let q=`SELECT * FROM user WHERE id='${id}'`
+    try{
+        connection.query(q,(err,result)=>{
+            if(err) throw err;
+            let user=result[0];
+            if(formPass!=user.password){
+                res.send("Wrong pass");
+            }else{
+                let q2=`UPDATE user SET username='${newUsername}' WHERE id='${id}'`;
+                connection.query(q2,(err,result)=>{
+                    //  if (err) throw err;
+                    res.redirect("/user");
+                })
+            }
+            
+        })
+    }catch(err){
+        console.log(err);
+        res.send("Error!")
+    }
+    // res.redirect("/user");
 });
 app.listen(Port,(req,res)=>{
     console.log(`Listening port ${Port}`);
