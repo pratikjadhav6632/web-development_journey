@@ -1,0 +1,17 @@
+body{
+    margin: 20px;
+    
+}
+table{
+    margin-left: 15%;
+}
+table,tr,td,th{
+    width: 70%;
+    border: 1px solid black;
+}
+#id{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
