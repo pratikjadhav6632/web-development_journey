@@ -1,35 +1,35 @@
-const express=require("express");
+const express = require("express");
 const { readlinkSync } = require("fs");
-const app=express();
-const Port=8080;
-const mysql=require("mysql2");
-const path=require("path");
-const methodOverride=require("method-override");
+const app = express();
+const Port = 8080;
+const mysql = require("mysql2");
+const path = require("path");
+const methodOverride = require("method-override");
 
 app.use(methodOverride("_method"));
-app.use(express.urlencoded({extended:true}));
-app.set("view engine","ejs");
-app.set("views",path.join(__dirname,"/views"));
+app.use(express.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
 
-app.use(express.static(path.join(__dirname,"/public/css")));
+app.use(express.static(path.join(__dirname, "/public/css")));
 
 // create the connection to database
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    database:'delta_app',
-    password:'Pratik#07'
+    database: 'delta_app',
+    password: 'Pratik#07'
 });
 
 //create home route
-app.get("/",(req,res)=>{
-    let q="SELECT count(*) FROM user";
+app.get("/", (req, res) => {
+    let q = "SELECT count(*) FROM user";
     try {
-        connection.query(q,(err, result) => {
+        connection.query(q, (err, result) => {
             if (err) throw err;
             console.log(result[0]);
-            let count=result[0]['count(*)'];
-            res.render("home.ejs",{count});
+            let count = result[0]['count(*)'];
+            res.render("home.ejs", { count });
         });
     } catch (err) {
         console.log(err);
@@ -38,60 +38,60 @@ app.get("/",(req,res)=>{
 
 })
 
-app.get("/user",(req,res)=>{
-    let q=`SELECT * FROM user`;
-    try{
-        connection.query(q,(err,result)=>{
-            if(err) throw err;
+app.get("/user", (req, res) => {
+    let q = `SELECT * FROM user`;
+    try {
+        connection.query(q, (err, result) => {
+            if (err) throw err;
             // res.send(result);
-            let users=result;
-            res.render("user.ejs",{users});
+            let users = result;
+            res.render("user.ejs", { users });
         })
-    }catch(err){
+    } catch (err) {
         console.log(err);
         res.send("Error!")
     }
 })
-app.get("/user/:id/edit",(req,res)=>{
-    let {id}=req.params;
-    let q=`SELECT * FROM user WHERE id='${id}'`
-    try{
-        connection.query(q,(err,result)=>{
-            if(err) throw err;
-            let user=result[0];
-            res.render("edit.ejs",{user});
+app.get("/user/:id/edit", (req, res) => {
+    let { id } = req.params;
+    let q = `SELECT * FROM user WHERE id='${id}'`
+    try {
+        connection.query(q, (err, result) => {
+            if (err) throw err;
+            let user = result[0];
+            res.render("edit.ejs", { user });
         })
-    }catch(err){
+    } catch (err) {
         console.log(err);
         res.send("Error!")
     }
 })
 
-app.patch("/user/:id",(req,res)=>{
-    let {id}=req.params;
-    let{password:formPass,username:newUsername}=req.body;
-    let q=`SELECT * FROM user WHERE id='${id}'`
-    try{
-        connection.query(q,(err,result)=>{
-            if(err) throw err;
-            let user=result[0];
-            if(formPass!=user.password){
+app.patch("/user/:id", (req, res) => {
+    let { id } = req.params;
+    let { password: formPass, username: newUsername } = req.body;
+    let q = `SELECT * FROM user WHERE id='${id}'`
+    try {
+        connection.query(q, (err, result) => {
+            if (err) throw err;
+            let user = result[0];
+            if (formPass != user.password) {
                 res.send("Wrong pass");
-            }else{
-                let q2=`UPDATE user SET username='${newUsername}' WHERE id='${id}'`;
-                connection.query(q2,(err,result)=>{
+            } else {
+                let q2 = `UPDATE user SET username='${newUsername}' WHERE id='${id}'`;
+                connection.query(q2, (err, result) => {
                     //  if (err) throw err;
                     res.redirect("/user");
                 })
             }
-            
+
         })
-    }catch(err){
+    } catch (err) {
         console.log(err);
         res.send("Error!")
     }
     // res.redirect("/user");
 });
-app.listen(Port,(req,res)=>{
+app.listen(Port, (req, res) => {
     console.log(`Listening port ${Port}`);
 });
