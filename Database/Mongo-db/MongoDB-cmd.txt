@@ -1,0 +1,141 @@
+college> db.student.find();
+[
+  {
+    _id: ObjectId('67c4a0dcd1e502369ffa4214'),
+    name: 'ajay',
+    age: 19,
+    marks: 89
+  },
+  {
+    _id: ObjectId('67c4a0eed1e502369ffa4215'),
+    name: 'ajay',
+    city: 'pune',
+    age: 19,
+    marks: 89
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4216'),
+    name: 'riya',
+    age: 19,
+    city: 'nira'
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4217'),
+    name: 'rohan',
+    age: 20,
+    city: 'satara'
+  }
+]
+college> db.student.insertMany([{name:"sidhu",age:19,city:"nira"},{name:"kedar",age:20,city:"satara"}]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67c4a4f1d1e502369ffa4218'),
+    '1': ObjectId('67c4a4f1d1e502369ffa4219')
+  }
+}
+college> db.student.find();
+[
+  {
+    _id: ObjectId('67c4a0dcd1e502369ffa4214'),
+    name: 'ajay',
+    age: 19,
+    marks: 89
+  },
+  {
+    _id: ObjectId('67c4a0eed1e502369ffa4215'),
+    name: 'ajay',
+    city: 'pune',
+    age: 19,
+    marks: 89
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4216'),
+    name: 'riya',
+    age: 19,
+    city: 'nira'
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4217'),
+    name: 'rohan',
+    age: 20,
+    city: 'satara'
+  },
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4218'),
+    name: 'sidhu',
+    age: 19,
+    city: 'nira'
+  },
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4219'),
+    name: 'kedar',
+    age: 20,
+    city:satara}
+]
+college> db.student.find();
+[
+  {
+    _id: ObjectId('67c4a0dcd1e502369ffa4214'),
+    name: 'ajay',
+    age: 19,
+    marks: 89
+  },
+  {
+    _id: ObjectId('67c4a0eed1e502369ffa4215'),
+    name: 'ajay',
+    city: 'pune',
+    age: 19,
+    marks: 89
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4216'),
+    name: 'riya',
+    age: 19,
+    city: 'nira'
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4217'),
+    name: 'rohan',
+    age: 20,
+    city: 'satara'
+  },
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4218'),
+    name: 'sidhu',
+    age: 19,
+    city: 'nira'
+  },
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4219'),
+    name: 'kedar',
+    age: 20,
+    city: 'satara'
+  }
+]
+college> db.student.find({city:"satara",name:"rohan"});
+[
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4217'),
+    name: 'rohan',
+    age: 20,
+    city: 'satara'
+  }
+]
+college> db.student.findOne({city:"satara"});
+{
+  _id: ObjectId('67c4a269d1e502369ffa4217'),
+  name: 'rohan',
+  age: 20,
+  city: 'satara'
+}
+college> db.student.find({city:"satara",name:"kedar"});
+[
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4219'),
+    name: 'kedar',
+    age: 20,
+    city: 'satara'
+  }
+]
+college>
