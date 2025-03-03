@@ -138,4 +138,115 @@ college> db.student.find({city:"satara",name:"kedar"});
     city: 'satara'
   }
 ]
+ college> db.student.find();
+[
+  {
+    _id: ObjectId('67c4a0dcd1e502369ffa4214'),
+    name: 'ajay',
+    age: 19,
+    marks: 89
+  },
+  {
+    _id: ObjectId('67c4a0eed1e502369ffa4215'),
+    name: 'ajay',
+    city: 'pune',
+    age: 19,
+    marks: 89
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4216'),
+    name: 'riya',
+    age: 19,
+    city: 'nira'
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4217'),
+    name: 'rohan',
+    age: 20,
+    city: 'satara'
+  },
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4218'),
+    name: 'sidhu',
+    age: 19,
+    city: 'nira'
+  },
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4219'),
+    name: 'kedar',
+    age: 20,
+    city: 'satara'
+  }
+]
+college> db.student.updateOne({name:"rohan"},{$set:{age:20}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+college> db.student.findOne({name:"rohan"});
+{
+  _id: ObjectId('67c4a269d1e502369ffa4217'),
+  name: 'rohan',
+  age: 20,
+  city: 'satara'
+}
+college> db.studen.updateMany({city:"nira"},{$set:{city:"pune"}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+college> db.student.updateMany({city:"nira"},{$set:{city:"pune"}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+college> db.student.find({city:"pune"});
+[
+  {
+    _id: ObjectId('67c4a0eed1e502369ffa4215'),
+    name: 'ajay',
+    city: 'pune',
+    age: 19,
+    marks: 89
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4216'),
+    name: 'riya',
+    age: 19,
+    city: 'pune'
+  },
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4218'),
+    name: 'sidhu',
+    age: 19,
+    city: 'pune'
+  }
+]
+college> db.student.replaceOne({name:'ajay'},{name:'ajay_j',city:'satara',marks:90,age:20});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+college> db.student.find({name:"ajay_j"});
+[
+  {
+    _id: ObjectId('67c4a0dcd1e502369ffa4214'),
+    name: 'ajay_j',
+    city: 'satara',
+    marks: 90,
+    age: 20
+  }
+]
 college>
