@@ -254,3 +254,129 @@ college> db.student.find({'performance.marks':88});
     performance: { marks: 88, grade: 'A' }
   }
 ]
+
+//Delete query
+
+college> db.student.find();
+[
+  {
+    _id: ObjectId('67c4a0dcd1e502369ffa4214'),
+    name: 'ajay_j',
+    city: 'satara',
+    marks: 90,
+    age: 20
+  },
+  {
+    _id: ObjectId('67c4a0eed1e502369ffa4215'),
+    name: 'ajay',
+    city: 'pune',
+    age: 19,
+    marks: 89
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4216'),
+    name: 'riya',
+    age: 19,
+    city: 'pune'
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4217'),
+    name: 'rohan',
+    age: 20,
+    city: 'satara'
+  },
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4218'),
+    name: 'sidhu',
+    age: 19,
+    city: 'pune'
+  },
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4219'),
+    name: 'kedar',
+    age: 20,
+    city: 'satara'
+  },
+  {
+    _id: ObjectId('67c58dcf824b696235fa4214'),
+    name: 'shweta',
+    performance: { marks: 88, grade: 'A' }
+  }
+]
+college> db.student.deleteOne({name:'ajay_j'});
+{ acknowledged: true, deletedCount: 1 }
+college> db.student.find();
+[
+  {
+    _id: ObjectId('67c4a0eed1e502369ffa4215'),
+    name: 'ajay',
+    city: 'pune',
+    age: 19,
+    marks: 89
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4216'),
+    name: 'riya',
+    age: 19,
+    city: 'pune'
+  },
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4217'),
+    name: 'rohan',
+    age: 20,
+    city: 'satara'
+  },
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4218'),
+    name: 'sidhu',
+    age: 19,
+    city: 'pune'
+  },
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4219'),
+    name: 'kedar',
+    age: 20,
+    city: 'satara'
+  },
+  {
+    _id: ObjectId('67c58dcf824b696235fa4214'),
+    name: 'shweta',
+    performance: { marks: 88, grade: 'A' }
+  }
+]
+
+college> db.student.deleteMany({age:{$lt:20}});
+{ acknowledged: true, deletedCount: 2 }
+college> db.student.find();
+[
+  {
+    _id: ObjectId('67c4a269d1e502369ffa4217'),
+    name: 'rohan',
+    age: 20,
+    city: 'satara'
+  },
+  {
+    _id: ObjectId('67c4a4f1d1e502369ffa4219'),
+    name: 'kedar',
+    age: 20,
+    city: 'satara'
+  },
+  {
+    _id: ObjectId('67c58dcf824b696235fa4214'),
+    name: 'shweta',
+    performance: { marks: 88, grade: 'A' }
+  }
+]
+
+college> db.student.deleteMany({});
+{ acknowledged: true, deletedCount: 3 }
+college> db.student.find();
+
+college> db.dropDatabase();
+{ ok: 1, dropped: 'college' }
+college> show dbs
+admin     40.00 KiB
+config   108.00 KiB
+coupons   80.00 KiB
+local     80.00 KiB
+college>
