@@ -249,4 +249,16 @@ college> db.student.find({name:"ajay_j"});
     age: 20
   }
 ]
-college>
+college> db.student.insertOne({name:'shweta',performance:{marks:88,grade:'A'}});
+{
+  acknowledged: true,
+  insertedId: ObjectId('67c58dcf824b696235fa4214')
+}
+college> db.student.find({'performance.marks':88});
+[
+  {
+    _id: ObjectId('67c58dcf824b696235fa4214'),
+    name: 'shweta',
+    performance: { marks: 88, grade: 'A' }
+  }
+]
