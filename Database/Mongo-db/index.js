@@ -39,4 +39,4 @@ User.insertMany([
     {name:'shweta',email:'shweta@yahoo.in',age:24}
 ]).then((res)=>{
     console.log(res);
-})
+});
