@@ -19,3 +19,9 @@ const userSchema=new mongoose.Schema({
 })
 
 const User=mongoose.model("User",userSchema);
+
+const user1=new User({
+    name:'ajay',
+    email:'ajay@yahoo.in',
+    age:42
+});
