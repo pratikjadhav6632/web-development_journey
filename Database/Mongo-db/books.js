@@ -17,9 +17,19 @@ const bookSchema=mongoose.Schema({
     },
     author:{
         type:String,
+        maxlength:50,
     },
     price:{
         type:Number,
+        min:1,
+    },
+    discount:{
+        type:Number,
+        default:0
+    },
+    categoary:{
+        type:String,
+        enum:['fiction','non-fiction'],
     },
 });
 
@@ -38,9 +48,20 @@ const Book=mongoose.model("Book",bookSchema);
 //     console.log(err);
 // });
 
-Book.findByIdAndDelete('67c95e4036c57b9823b328af').then((res)=>{
+// Book.findByIdAndDelete('67c95e4036c57b9823b328af').then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// });
+
+const book2=new Book({
+    title:"marvel comics",
+    price:100,
+    categoary:"fiction",
+
+});
+book2.save().then((res)=>{
     console.log(res);
 }).catch((err)=>{
     console.log(err);
 });
-
