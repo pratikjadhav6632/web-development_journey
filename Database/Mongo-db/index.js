@@ -83,7 +83,20 @@ const User = mongoose.model("User", userSchema);
 //     console.log(err);
 // })
 
-User.findOneAndUpdate({name:'kiran'},{age:'35'},{new:true}).then((res)=>{
+// User.findOneAndUpdate({name:'kiran'},{age:'35'},{new:true}).then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// })
+
+User.deleteOne({name:'kiran'}).then((res)=>{
+    console.log(res);
+}).catch((err)=>{
+    console.log(err);
+})
+
+
+User.deleteMany({age:{$gte:25}}).then((res)=>{
     console.log(res);
 }).catch((err)=>{
     console.log(err);
