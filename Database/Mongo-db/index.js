@@ -89,14 +89,26 @@ const User = mongoose.model("User", userSchema);
 //     console.log(err);
 // })
 
-User.deleteOne({name:'kiran'}).then((res)=>{
+// User.deleteOne({name:'kiran'}).then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// })
+
+
+// User.deleteMany({age:{$gte:25}}).then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// })
+
+User.findOneAndDelete({name:'ajay'}).then((res)=>{
     console.log(res);
 }).catch((err)=>{
     console.log(err);
 })
 
-
-User.deleteMany({age:{$gte:25}}).then((res)=>{
+User.findByIdAndDelete('67c8f131e758820a45b35686').then((res)=>{
     console.log(res);
 }).catch((err)=>{
     console.log(err);
