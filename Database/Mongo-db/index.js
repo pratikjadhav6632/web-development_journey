@@ -76,3 +76,9 @@ User.updateMany({age:24},{age:25}).then((res)=>{
 }).catch((err)=>{
     console.log(err);
 })
+
+User.findByIdAndUpdate("67c735b72cadeda31aed257a",{age:18},{new:true}).then((res)=>{
+    console.log(res);
+}).catch((err)=>{
+    console.log(err);
+})
