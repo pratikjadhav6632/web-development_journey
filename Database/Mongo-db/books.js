@@ -66,6 +66,7 @@ const Book=mongoose.model("Book",bookSchema);
 //     console.log(err);
 // });
 
+//Validation with update
 Book.findByIdAndUpdate("67c96bda9604af11c2304377",{price:-200},{runValidators:true}).then((res)=>{
     console.log(res);
 }).catch((err)=>{
