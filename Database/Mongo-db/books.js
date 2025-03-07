@@ -36,35 +36,35 @@ const bookSchema=mongoose.Schema({
 const Book=mongoose.model("Book",bookSchema);
 
 
-// let Book1=new Book({
-//     title:"Mathematics XII", //this field NOT NULL
-//     author:"R.D.Sharma",
-//     price:"233", //It can Parse/convert string->Number 
-// });
+let Book1=new Book({
+    title:"Mathematics XII", //this field NOT NULL
+    author:"R.D.Sharma",
+    price:"233", //It can Parse/convert string->Number 
+});
 
-// Book1.save().then((res)=>{
-//     console.log(res);
-// }).catch((err)=>{
-//     console.log(err);
-// });
+Book1.save().then((res)=>{
+    console.log(res);
+}).catch((err)=>{
+    console.log(err);
+});
 
-// Book.findByIdAndDelete('67c95e4036c57b9823b328af').then((res)=>{
-//     console.log(res);
-// }).catch((err)=>{
-//     console.log(err);
-// });
+Book.findByIdAndDelete('67c95e4036c57b9823b328af').then((res)=>{
+    console.log(res);
+}).catch((err)=>{
+    console.log(err);
+});
 
-// const book2=new Book({
-//     title:"marvel comics",
-//     price:100,
-//     categoary:"fiction",
+const book2=new Book({
+    title:"marvel comics",
+    price:100,
+    categoary:"fiction",
 
-// });
-// book2.save().then((res)=>{
-//     console.log(res);
-// }).catch((err)=>{
-//     console.log(err);
-// });
+});
+book2.save().then((res)=>{
+    console.log(res);
+}).catch((err)=>{
+    console.log(err);
+});
 
 //Validation with update
 Book.findByIdAndUpdate("67c96bda9604af11c2304377",{price:-200},{runValidators:true}).then((res)=>{
