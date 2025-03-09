@@ -18,7 +18,6 @@ const allChat=[
         message:"how are you!",
         created_at:new Date()
     },
-
     {
         from:"komal",
         to:"riya",
