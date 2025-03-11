@@ -10,11 +10,11 @@
     <h1>All chats!</h1>
     <%for(let chat of chats){%>
         <div class="chat">
-            <p>From:<i><%=chat.from%></i></p>
+            <p><b>From:</b><i>   <%=chat.from%></i></p>
             <div class="msg">
-                <p>Message: <%=chat.message%></p>
+                <p><b>Message:</b> <%=chat.message%></p>
             </div>
-            <p>Recived by:<i><%=chat.to%></i></p>
+            <p><b>Recived by:</b>  <i><%=chat.to%></i></p>
             <hr>
         </div>
     <%}%>
