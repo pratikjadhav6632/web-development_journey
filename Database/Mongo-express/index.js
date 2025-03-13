@@ -29,6 +29,11 @@ app.get("/chats", async(req, res) => {
     res.render("chat.ejs",{chats});
 })
 
+//New Route
+app.get("/chats/new",(req,res)=>{
+    res.render("new.ejs")
+})
+
 app.listen(8080, () => {
     console.log("Server is Listening port 8080");
 });
