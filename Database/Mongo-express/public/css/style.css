@@ -1,12 +1,14 @@
 body{
     margin:20px;
     padding: 20px;
+    background-color: bisque;
 }
 
 .chat{
     background-color: aliceblue;
     border-radius: 16px;
     padding: 20px;
+    margin-bottom: 5px;
 }
 .msg{
     display: inline-block;
@@ -17,4 +19,37 @@ body{
 }
 .msg-h{
     color: black;
+}
+
+
+h2{
+    text-align: center;
+}
+.n-chat{
+    height: 400px;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 16px;
+    background-color: rgb(183, 236, 236);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.n-chat,input{
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+
+}
+.n-chat{
+
+    button{
+        background-color: rgb(182, 227, 114);
+        padding: 5px;
+        border: none;
+        border-radius: 8px;
+        margin-left: 25%;
+    }
 }
