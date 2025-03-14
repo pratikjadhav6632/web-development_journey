@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
-const Chat=require("./model/chat.js")
+const Chat=require("./model/chat.js");
+const exp = require("constants");
+const { Console } = require("console");
 
 
 main().then((res)=>{
@@ -18,6 +20,7 @@ async function main(){
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public/css")));
+app.use(express.urlencoded({extended:true}));
 
 app.get("/", (req, res) => {
     res.send("root is working");
@@ -32,6 +35,21 @@ app.get("/chats", async(req, res) => {
 //New Route
 app.get("/chats/new",(req,res)=>{
     res.render("new.ejs")
+})
+app.post("/chats",(req,res)=>{
+    let {from,to,message}=req.body;
+    let newChat=new Chat({
+        from:from,
+        to:to,
+        message:message,
+        created_at:new Date()
+ });
+ newChat.save().then((res)=>{
+    console.log("Chat saved successfully...");
+ }).catch((err)=>{
+    console.log(err);
+ })
+ res.redirect("/chats")
 })
 
 app.listen(8080, () => {
