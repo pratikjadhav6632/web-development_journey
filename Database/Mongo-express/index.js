@@ -7,6 +7,7 @@ const exp = require("constants");
 const { Console } = require("console");
 
 
+//connect Mongo-db to app
 main().then((res)=>{
     console.log("Connection successfully...");
 }).catch((err)=>{
