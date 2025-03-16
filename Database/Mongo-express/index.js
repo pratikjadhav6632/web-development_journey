@@ -63,11 +63,13 @@ app.get("/chats/:id/edit",async(req,res)=>{
     res.render("edit.ejs",{chat});
     
 })
+
+//updated route
 app.patch("/chats/:id",async(req,res)=>{
     let{id}=req.params;
-    let newChat=req.body.content;
-    let chat=await Chat.find((p)=>id===p.id);
-    chat.content=newChat;
+    let {message:newChat}=req.body;
+    let chat=await Chat.findByIdAndUpdate(id,{message:newChat},{runValidators:true ,new:true});
+    console.log(chat);
     res.redirect("/chats");
 })
 
