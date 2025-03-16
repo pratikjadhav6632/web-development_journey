@@ -53,6 +53,14 @@ app.post("/chats",(req,res)=>{
  res.redirect("/chats")
 })
 
+//Edit route
+
+app.get("/chats/:id/edit",(req,res)=>{
+    let {id}=req.params;
+    let chat=Chat.findById(id);
+    res.render("edit.ejs");
+})
+
 app.listen(8080, () => {
     console.log("Server is Listening port 8080");
 });
