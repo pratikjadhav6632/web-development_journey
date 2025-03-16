@@ -55,10 +55,11 @@ app.post("/chats",(req,res)=>{
 
 //Edit route
 
-app.get("/chats/:id/edit",(req,res)=>{
+app.get("/chats/:id/edit",async(req,res)=>{
     let {id}=req.params;
-    let chat=Chat.findById(id);
-    res.render("edit.ejs");
+    let chat= await Chat.findById(id);
+    res.render("edit.ejs",{chat});
+    console.log(chat.id);
 })
 
 app.listen(8080, () => {
