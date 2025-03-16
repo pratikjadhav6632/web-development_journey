@@ -69,10 +69,18 @@ app.patch("/chats/:id",async(req,res)=>{
     let{id}=req.params;
     let {message:newChat}=req.body;
     let chat=await Chat.findByIdAndUpdate(id,{message:newChat},{runValidators:true ,new:true});
-    console.log(chat);
+    //console.log(chat);
     res.redirect("/chats");
 })
 
+//delete route
+
+app.delete("/chats/:id",async(req,res)=>{
+    let {id}=req.params;
+    let delChat=await Chat.findByIdAndDelete(id);
+    console.log(delChat);
+    res.redirect("/chats");
+})
 app.listen(8080, () => {
     console.log("Server is Listening port 8080");
 });
