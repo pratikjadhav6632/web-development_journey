@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const Chat=require("./model/chat.js");
 const exp = require("constants");
 const { Console } = require("console");
+const methodOverride=require("method-override");
 
 
 //connect Mongo-db to app
@@ -22,6 +23,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public/css")));
 app.use(express.urlencoded({extended:true}));
+app.use(methodOverride("_method"));
 
 app.get("/", (req, res) => {
     res.send("root is working");
@@ -59,7 +61,14 @@ app.get("/chats/:id/edit",async(req,res)=>{
     let {id}=req.params;
     let chat= await Chat.findById(id);
     res.render("edit.ejs",{chat});
-    console.log(chat.id);
+    
+})
+app.patch("/chats/:id",async(req,res)=>{
+    let{id}=req.params;
+    let newChat=req.body.content;
+    let chat=await Chat.find((p)=>id===p.id);
+    chat.content=newChat;
+    res.redirect("/chats");
 })
 
 app.listen(8080, () => {
