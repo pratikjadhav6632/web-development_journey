@@ -67,11 +67,12 @@ h3{
     text-align: center;
 }
 .Edit{
+    color: white;
     margin: auto;
     width: 300px;
     height: 400px;
     border: 1px solid white;
-    background-color: rgb(228, 210, 166);
+    background-color: rgb(15, 156, 232);
     box-shadow: 12px 29px 30px black;
 
     p{
