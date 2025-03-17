@@ -63,12 +63,16 @@ h2{
     color: black;
     margin-left: 10px;
 }
-
+h3{
+    text-align: center;
+}
 .Edit{
     margin: auto;
     width: 300px;
     height: 400px;
     border: 1px solid white;
+    background-color: rgb(228, 210, 166);
+    box-shadow: 12px 29px 30px black;
 
     p{
         text-align: center;   
