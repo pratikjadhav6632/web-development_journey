@@ -63,3 +63,21 @@ h2{
     color: black;
     margin-left: 10px;
 }
+
+.Edit{
+    width: 300px;
+    height: 400px;
+    border: 1px solid white;
+
+    p{
+        text-align: center;   
+    };
+    form{
+        text-align: center;
+
+        textarea{
+            border: none;
+            border-radius: 10px;
+        }
+    }
+}
