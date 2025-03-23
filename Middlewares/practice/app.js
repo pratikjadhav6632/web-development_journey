@@ -21,11 +21,7 @@ app.get("/api", (req, res) => {
 app.get("/",(req,res)=>{
     abc=abc;
 })
-app.use((err,req,res,next)=>{
-   let {status=500,message='Some error occured'}=err;
-   res.status(status).send(message);
-    
-})
+
 
 //OR
 
@@ -40,3 +36,15 @@ app.use((err,req,res,next)=>{
 // app.get("/api/dem",checktoken,(req,res)=>{
 //     res.send("Data...");
 // })
+
+/*Create an admin route & send an error with a 403 status code */
+
+app.get("/admin",(req,res)=>{
+    throw new ExpressError(403,"ACCESS is Forbidden");
+})
+
+app.use((err,req,res,next)=>{
+    let {status=500,message='Some error occured'}=err;
+    res.status(status).send(message);
+     
+ })
