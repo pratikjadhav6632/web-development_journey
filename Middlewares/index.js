@@ -12,12 +12,12 @@ app.use((req,res,next)=>{
 })
 
 //using req&res object in middleware
-app.use((req,res)=>{
-    console.log("I am Another one middleware");
-   
+app.use((req,res,next)=>{
+    console.log("I am 1st one middleware");
+    next();
 })
 //app.use(middleware)
 app.use("/",(req,res)=>{
-    console.log("Hi, I am a Middleware..")
+    console.log("Hi, I am 2nd Middleware..")
     res.send("Byy..");
 })
