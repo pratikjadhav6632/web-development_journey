@@ -25,17 +25,17 @@ app.get("/",(req,res)=>{
 
 //OR
 
-// const checktoken=(req,res,next)=>{
-//     let {token}=req.query;
-//     if(token==="giveaccess"){
-//         return next();
-//     }
-//     res.send("ACCESS DENIED!");
-// }
+const checktoken=(req,res,next)=>{
+    let {token}=req.query;
+    if(token==="giveaccess"){
+        return next();
+    }
+    res.send("ACCESS DENIED!");
+}
 
-// app.get("/api/dem",checktoken,(req,res)=>{
-//     res.send("Data...");
-// })
+app.get("/api/dem",checktoken,(req,res)=>{
+    res.send("Data...");
+})
 
 /*Create an admin route & send an error with a 403 status code */
 
