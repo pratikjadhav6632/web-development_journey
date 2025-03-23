@@ -17,3 +17,18 @@ app.use("/api", (req, res, next) => {
 app.get("/api", (req, res) => {
     res.send("Data..");
 });
+
+
+//OR
+
+const checktoken=(req,res,next)=>{
+    let {token}=req.query;
+    if(token==="giveaccess"){
+        return next();
+    }
+    res.send("ACCESS DENIED!");
+}
+
+app.get("/api/dem",checktoken,(req,res)=>{
+    res.send("Data...");
+})
