@@ -6,6 +6,7 @@ const Chat=require("./model/chat.js");
 const exp = require("constants");
 const { Console } = require("console");
 const methodOverride=require("method-override");
+const ExpressError = require("./ExpressError");
 
 
 //connect Mongo-db to app
@@ -16,7 +17,7 @@ main().then((res)=>{
 });
 
 async function main(){
-    await mongoose.connect("mongodb://127.0.0.1:27017/whatschat");
+    await mongoose.connect("mongodb://127.0.0.1:27017/fakewhatschat");
 }
 
 app.set("views", path.join(__dirname, "views"));
@@ -84,3 +85,19 @@ app.delete("/chats/:id",async(req,res)=>{
 app.listen(8080, () => {
     console.log("Server is Listening port 8080");
 });
+
+//NEW Show-route
+
+app.get("/chats/:id",async(req,res,next)=>{
+    let {id}=req.params;
+    let chat=await Chat.findById(id);
+    if(!chat){
+       next(new ExpressError(404,"Chat not found"));
+    }
+    res.render("show.ejs",{chat});
+})
+
+app.use((err,req,res,next)=>{
+    let {status,message}=err;
+    res.status(status).send(message);
+})

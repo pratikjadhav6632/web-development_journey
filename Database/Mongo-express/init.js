@@ -8,7 +8,7 @@ main().then((res)=>{
 });
 
 async function main(){
-    await mongoose.connect("mongodb://127.0.0.1:27017/whatschat");
+    await mongoose.connect("mongodb://127.0.0.1:27017/fakewhatschat");
 }
 
 const allChat=[
