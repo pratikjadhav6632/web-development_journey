@@ -18,8 +18,11 @@ app.get("/api", (req, res) => {
     res.send("Data..");
 });
 
+app.get("/",(req,res)=>{
+    abc=abc;
+})
 app.use((err,req,res,next)=>{
-   let {status,message}=err;
+   let {status=500,message='Some error occured'}=err;
    res.status(status).send(message);
     
 })
