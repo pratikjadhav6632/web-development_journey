@@ -111,6 +111,20 @@ app.get("/chats/:id", asyncWrap(async (req, res, next) => {
         res.render("show.ejs", { chat });
 }));
 
+//validationError Handler for MongoDB
+const ValidationErrorHandler=(err)=>{
+    console.log("Please check rules");
+    console.log(err.message);
+    return err;
+}
+app.use((err,req,res,next)=>{
+    console.log(err.name);
+    if(err.name=="ValidationError"){
+       err= ValidationErrorHandler(err);
+    }
+    next(err);
+})
+
 //Error Handler
 app.use((err, req, res, next) => {
     let { status=404, message="some err occured" } = err;
