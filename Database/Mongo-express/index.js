@@ -33,6 +33,7 @@ function asyncWrap(fn){
         fn(req,res,next).catch((err)=>{next(err)})
     };
 };
+
 app.get("/", (req, res) => {
     res.send("root is working");
 })
@@ -110,6 +111,7 @@ app.get("/chats/:id", asyncWrap(async (req, res, next) => {
         res.render("show.ejs", { chat });
 }));
 
+//Error Handler
 app.use((err, req, res, next) => {
     let { status=404, message="some err occured" } = err;
     res.status(status).send(message);
