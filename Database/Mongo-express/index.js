@@ -45,7 +45,7 @@ app.get("/chats", async (req, res,next) => {
 app.get("/chats/new", (req, res) => {
     res.render("new.ejs")
 })
-app.post("/chats", (req, res,next) => {
+app.post("/chats",async (req, res,next) => {
     try {
         let { from, to, message } = req.body;
         let newChat = new Chat({
@@ -54,17 +54,12 @@ app.post("/chats", (req, res,next) => {
             message: message,
             created_at: new Date()
         });
-        newChat.save().then((res) => {
-            console.log("Chat saved successfully...");
-        }).catch((err) => {
-            console.log(err);
-        })
-        res.redirect("/chats")
-    } catch (err) {
+       await newChat.save();
+        res.redirect("/chats");
+    }catch(err) {
         next(err);
     }
-
-})
+});
 
 //Edit route
 
@@ -124,10 +119,11 @@ app.get("/chats/:id", async (req, res, next) => {
         res.render("show.ejs", { chat });
     } catch (err) {
         next(err);
+
     }
 })
 
 app.use((err, req, res, next) => {
-    let { status, message } = err;
+    let { status=404, message="some err occured" } = err;
     res.status(status).send(message);
 })
