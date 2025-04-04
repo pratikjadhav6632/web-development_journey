@@ -21,4 +21,6 @@ const userSchema=new Schema({
         city:String
          },
     ],
-})
+});
+
+const User=mongoose.model("User",userSchema);
