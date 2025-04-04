@@ -24,3 +24,16 @@ const userSchema=new Schema({
 });
 
 const User=mongoose.model("User",userSchema);
+
+const adduser=async()=>{
+    const user1=new User({
+        username:"Kiyara",
+        location:{
+            location:"123b main road",
+            city:"Mumbai"
+        }
+    })
+    let result=await user1.save();
+    console.log(result);
+}
+adduser();
