@@ -28,11 +28,12 @@ const User=mongoose.model("User",userSchema);
 const adduser=async()=>{
     const user1=new User({
         username:"Kiyara",
-        location:[{
+        addresses:{
             location:"123b main road",
             city:"Mumbai"
-        }],
+        },
     })
+    // user1.push(lo)
     let result=await user1.save();
     console.log(result);
 }
