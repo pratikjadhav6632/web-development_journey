@@ -34,7 +34,6 @@ const adduser=async()=>{
             city:"Mumbai"
         },
     })
-    // user1.push(lo)
     let result=await user1.save();
     console.log(result);
 }
