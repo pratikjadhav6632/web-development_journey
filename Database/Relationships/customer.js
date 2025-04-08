@@ -24,4 +24,11 @@ const userSchema=new Schema({
     ],
 });
 
+const orderSchema=new Schema({
+  item:String,
+  price:Number,
+});
+
+
+
 const User=mongoose.model("User",userSchema);
