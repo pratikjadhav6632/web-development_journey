@@ -31,21 +31,41 @@ const customerSchema=new Schema({
 const Customer=mongoose.model("Customer",customerSchema);
 const Order=mongoose.model("Order",orderSchema);
 
+// let addCust=async()=>{
+//     let cust1=new Customer({
+//         name:"Rahul K"
+//     });
+//     let order1=await Order.findOne({item:"Chips"});
+//     let order2=await Order.findOne({item:"snacks"});
+
+//     cust1.orders.push(order1);
+//     cust1.orders.push(order2);
+
+//     let result=await cust1.save();
+//     console.log(result);
+// }
+// addCust();
+
 let addCust=async()=>{
-    let cust1=new Customer({
-        name:"Rahul K"
+    let cust2=new Customer({
+        name:"Karan j"
     });
-    let order1=await Order.findOne({item:"Chips"});
-    let order2=await Order.findOne({item:"snacks"});
+    let newOrder=new Order({
+        item:"Pizza",
+        price:270
+    });
 
-    cust1.orders.push(order1);
-    cust1.orders.push(order2);
+    cust2.orders.push(newOrder);
 
-    let result=await cust1.save();
-    console.log(result);
+    await cust2.save();
+    await newOrder.save();
+
+    console.log("Added successfully");
+
 }
 addCust();
 
+const 
 // let addOrder=async ()=>{
 //     let res=await Order.insertMany([
 //         {item:"Chips",price:40},
