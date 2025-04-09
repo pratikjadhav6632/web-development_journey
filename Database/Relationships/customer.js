@@ -63,9 +63,14 @@ let addCust=async()=>{
     console.log("Added successfully");
 
 }
-addCust();
+// addCust();
 
-const 
+const delCust=async()=>{
+    let data= await Customer.findByIdAndDelete("67f690b9d02792c90bf63a2a")
+    console.log(data);
+
+} 
+delCust();
 // let addOrder=async ()=>{
 //     let res=await Order.insertMany([
 //         {item:"Chips",price:40},
