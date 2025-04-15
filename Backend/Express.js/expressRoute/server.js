@@ -3,8 +3,8 @@ const app=express();
 
 const User=require("./routes/user.js");
 const Post=require("./routes/post.js");
-//User 
 
+//User 
 app.use("/user",User);
 
 //Post
