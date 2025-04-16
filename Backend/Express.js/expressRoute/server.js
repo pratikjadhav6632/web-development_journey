@@ -13,6 +13,10 @@ app.use("/user",User);
 //Post
 app.use("/posts",Post);
 
+app.get("/greet",(req,res)=>{
+    let {MadeIn="Bharat"}=req.cookies;
+    res.send(`Hi,${MadeIn}`);
+})
 app.get("/getcookies",(req,res)=>{
     res.cookie("Greet","namaste");
     res.cookie("MadeIn","India");
