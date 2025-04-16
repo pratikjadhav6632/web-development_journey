@@ -2,6 +2,7 @@ const express=require("express");
 const router=express.Router();
 
 router.get("/",(req,res)=>{
+    console.dir(req.cookies);
     res.send("Hey this is User route");
 });
 
