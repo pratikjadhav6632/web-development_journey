@@ -6,7 +6,11 @@ const Post=require("./routes/post.js");
 const session=require("express-session");
 
 //express-session
-app.use(session({secret:"superSecret"}));
+app.use(session({
+    secret:"superSecret",
+    resave:false,
+    saveUninitialized:true    
+}));
 
 //cookieParser
 app.use(cookieParser("secreteKey"));
@@ -19,7 +23,12 @@ app.use("/posts",Post);
 
 
 app.get("/test",(req,res)=>{
-    res.send("session successful..");
+    if(req.session.count){
+        req.session.count++;
+    }else{
+        req.session.count=1;
+    }
+    res.send(`count of req send by you are ${req.session.count}`);
 });
 
 
