@@ -5,12 +5,13 @@ const User=require("./routes/user.js");
 const Post=require("./routes/post.js");
 const session=require("express-session");
 
-//express-session
-app.use(session({
+const sessionOption={
     secret:"superSecret",
     resave:false,
     saveUninitialized:true    
-}));
+};
+//express-session
+app.use(session(sessionOption));
 
 //cookieParser
 app.use(cookieParser("secreteKey"));
@@ -21,6 +22,16 @@ app.use("/user",User);
 //Post
 app.use("/posts",Post);
 
+
+app.get("/register",(req,res)=>{
+    let {name}=req.query;
+    req.session.name=name;
+  res.redirect("/hello");
+})
+
+app.get("/hello",(req,res)=>{
+    res.send(`Hello,${req.session.name}`);
+})
 
 app.get("/test",(req,res)=>{
     if(req.session.count){
