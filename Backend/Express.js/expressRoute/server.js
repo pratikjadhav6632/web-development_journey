@@ -4,6 +4,7 @@ const cookieParser=require("cookie-parser");
 const User=require("./routes/user.js");
 const Post=require("./routes/post.js");
 const session=require("express-session");
+const flash=require("connect-flash");
 
 const sessionOption={
     secret:"superSecret",
@@ -13,6 +14,7 @@ const sessionOption={
 //express-session
 app.use(session(sessionOption));
 
+app.use(flash());
 //cookieParser
 app.use(cookieParser("secreteKey"));
 
@@ -26,10 +28,12 @@ app.use("/posts",Post);
 app.get("/register",(req,res)=>{
     let {name}=req.query;
     req.session.name=name;
+    req.flash("success","Succesfully registerd!");
   res.redirect("/hello");
 })
 
 app.get("/hello",(req,res)=>{
+    console.log(req.flash("success"));
     res.send(`Hello,${req.session.name}`);
 })
 
