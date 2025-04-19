@@ -5,6 +5,10 @@ const User=require("./routes/user.js");
 const Post=require("./routes/post.js");
 const session=require("express-session");
 const flash=require("connect-flash");
+const path=require("path");
+
+app.set("views",path.join(__dirname,"/views"));
+app.set("view engine", "ejs");
 
 const sessionOption={
     secret:"superSecret",
@@ -33,8 +37,7 @@ app.get("/register",(req,res)=>{
 })
 
 app.get("/hello",(req,res)=>{
-    console.log(req.flash("success"));
-    res.send(`Hello,${req.session.name}`);
+   res.render("page.ejs",{name: req.session.name, msg: req.flash("success")});
 })
 
 app.get("/test",(req,res)=>{
