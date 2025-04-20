@@ -28,7 +28,11 @@ app.use("/user",User);
 //Post
 app.use("/posts",Post);
 
-
+app.use((req,res,next)=>{
+    res.locals.SuccessMsg=req.flash("success");
+    res.locals.errMsg=req.flash("error");
+    next();
+})
 app.get("/register",(req,res)=>{
     let {name="Anynomous"}=req.query;
     req.session.name=name;
@@ -42,8 +46,6 @@ app.get("/register",(req,res)=>{
 })
 
 app.get("/hello",(req,res)=>{
-    res.locals.SuccessMsg=req.flash("success");
-    res.locals.errMsg=req.flash("error");
    res.render("page.ejs",{name: req.session.name});
 })
 
