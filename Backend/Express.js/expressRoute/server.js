@@ -30,14 +30,21 @@ app.use("/posts",Post);
 
 
 app.get("/register",(req,res)=>{
-    let {name}=req.query;
+    let {name="Anynomous"}=req.query;
     req.session.name=name;
-    req.flash("success","Succesfully registerd!");
+    if(name==="Anynomous")
+    {
+        req.flash("error","failed registerd!");
+    }else{
+        req.flash("success","Succesfully registerd!");
+    }
   res.redirect("/hello");
 })
 
 app.get("/hello",(req,res)=>{
-   res.render("page.ejs",{name: req.session.name, msg: req.flash("success")});
+    res.locals.SuccessMsg=req.flash("success");
+    res.locals.errMsg=req.flash("error");
+   res.render("page.ejs",{name: req.session.name});
 })
 
 app.get("/test",(req,res)=>{
