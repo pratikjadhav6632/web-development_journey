@@ -15,10 +15,13 @@ const sessionOption={
     resave:false,
     saveUninitialized:true    
 };
+
 //express-session
 app.use(session(sessionOption));
 
+//Flash 
 app.use(flash());
+
 //cookieParser
 app.use(cookieParser("secreteKey"));
 
@@ -28,11 +31,13 @@ app.use("/user",User);
 //Post
 app.use("/posts",Post);
 
+//Local res
 app.use((req,res,next)=>{
     res.locals.SuccessMsg=req.flash("success");
     res.locals.errMsg=req.flash("error");
     next();
-})
+});
+
 app.get("/register",(req,res)=>{
     let {name="Anynomous"}=req.query;
     req.session.name=name;
