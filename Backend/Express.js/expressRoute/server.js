@@ -38,6 +38,7 @@ app.use((req,res,next)=>{
     next();
 });
 
+//register route
 app.get("/register",(req,res)=>{
     let {name="Anynomous"}=req.query;
     req.session.name=name;
