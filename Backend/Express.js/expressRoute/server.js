@@ -51,9 +51,11 @@ app.get("/register",(req,res)=>{
   res.redirect("/hello");
 })
 
+//Hello Route
 app.get("/hello",(req,res)=>{
    res.render("page.ejs",{name: req.session.name});
 })
+
 
 app.get("/test",(req,res)=>{
     if(req.session.count){
