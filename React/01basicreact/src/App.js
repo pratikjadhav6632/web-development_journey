@@ -1,8 +1,11 @@
-
+import Chai from "./Chai" //Import Chai 
 function App() {
   return (
-    <h1>Hello World!</h1>
+    <>
+    <Chai/> {/* component*/}
+    <i>Pratik jadhav</i> 
+    </>  //Fragmentation
   );
 }
 
-export default App;
+export default App; //Export App
