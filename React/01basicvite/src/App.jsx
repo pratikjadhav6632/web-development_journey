@@ -1,12 +1,11 @@
 
-import Chai from "./Chai"
-function App() {
+import Chai from "./Chai" //import Chai component  (name should always start with Cap letter)
+function App() { 
   return (
     <>
     <Chai/>
   <i>Pratik jadhav </i>
     </>
   )
-}
-
+}  //(name should always start with Cap letter)
 export default App
