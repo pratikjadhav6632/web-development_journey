@@ -1,6 +1,17 @@
 function Chai(){
     return(
-        <h2>Chai is ready to drink</h2>
+        <>
+            <nav>
+                <ul className="Nav-li">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact </li>
+                    <li>Features</li>
+                </ul>
+            </nav>
+            
+        </>
+        
     )
 } // (name should always start with Cap letter)
 

@@ -3,8 +3,11 @@ import Chai from "./Chai" //import Chai component  (name should always start wit
 function App() { 
   return (
     <>
+  <div class="demo">
     <Chai/>
   <i>Pratik jadhav </i>
+
+  </div>
     </>
   )
 }  //(name should always start with Cap letter)

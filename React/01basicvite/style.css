@@ -1,0 +1,27 @@
+body{
+    padding:0;
+    margin: 0;
+}
+.demo{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(26, 27, 27);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    i{
+        color: red;
+    }
+}
+
+.Nav-li{
+    display: flex;
+    margin-left: 5px;
+    color: red;
+    li{
+        margin-left: 5rem;
+        text-decoration: none;
+        list-style: none;
+    }
+}
