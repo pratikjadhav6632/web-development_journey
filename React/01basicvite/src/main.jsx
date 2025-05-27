@@ -28,6 +28,8 @@ let reactElement=React.createElement(
 
 
 createRoot(document.getElementById('root')).render( 
-
+<>
+<Chai/>
 <App/>
+</>
 ) //Get root id from html and render App component on them 
