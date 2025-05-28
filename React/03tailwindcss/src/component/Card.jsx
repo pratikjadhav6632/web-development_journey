@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({username,btnName="visit me"}) {
+function Card({btnName="visit Me",username}) {
    
   return (
     <div className="max-w-xs rounded-md shadow-md bg-black text-gray-100">

@@ -12,7 +12,7 @@ function App() {
       <h1 className="bg-green-500 rounded-xl p-4 mb-4">Tailwind CSS</h1>
       <div className="flex gap-4">
     <Card username="Green-Plant" btnName="Click Me" />
-    <Card username="foliage" btnName="Learn More" />
+    <Card username="foliage" />
     </div>
       
     </>
