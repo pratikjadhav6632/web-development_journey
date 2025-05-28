@@ -10,7 +10,10 @@ function App() {
   return (
     <>
       <h1 className="bg-green-500 rounded-xl p-4 mb-4">Tailwind CSS</h1>
-    <Card/>
+      <div className="flex gap-4">
+    <Card username="Green-Plant" btnName="Click Me" />
+    <Card username="foliage" btnName="Learn More" />
+    </div>
       
     </>
   );
