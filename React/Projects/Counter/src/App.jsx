@@ -3,7 +3,6 @@ import './App.css'
 
 function App() {
   let [Count, setCount] = useState(0)
-  let r
   const addValue = () => {
     if (Count < 20) {
       setCount(Count + 1)
@@ -21,7 +20,6 @@ function App() {
 
   return (
     <>
-
       <h1>Counter Value: {Count} </h1>
       <div className="btn">
         <button
@@ -32,8 +30,7 @@ function App() {
           onClick={removeValue}
         >Remove Value</button>
       </div>
-        <p>Total Count:{Count}</p>
-        
+        <p>Total Count:{Count}</p>   
     </>
   )
 }
