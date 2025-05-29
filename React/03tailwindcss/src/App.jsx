@@ -11,17 +11,15 @@ function App() {
     <>
       <h1 className="bg-green-500 rounded-xl p-4 mb-4">Tailwind CSS</h1>
       <div className="flex gap-4 flex-wrap justify-center">
-    <Card username="Green-Plant" btnName="Click Me" />
-    <Card username="foliage" />
-    <Card username="foliage" />
-    <Card username="foliage" />
-    <Card username="foliage" />
-  
-    <Card username="foliage" />
-    <Card />
-    <Card username="foliage" />
-    </div>
-      
+        <Card username="Green-Plant" btnName="Click Me" />
+        <Card username="foliage" />
+        <Card username="foliage" />
+        <Card username="foliage" />
+        <Card username="foliage" />   
+        <Card username="foliage" />
+        <Card />
+        <Card username="foliage" />
+      </div>
     </>
   );
 }
