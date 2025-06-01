@@ -9,21 +9,17 @@ function App() {
   const [password, setPassword] = useState("");
 const passwordRef=useRef(null)
 
-  let passGenerator = useCallback(() => {
-    let pass = "";
-
-    let str = "abcdefghijklmnopqsrtuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-    if (numAllowed) str += "0123456789";
-    if (charAllowed) str += "!@#$%^&*()_+{}[]";
-
-    for (let i = 1; i <=length; i++) {
-      let char = Math.floor(Math.random()*str.length + 1);
-      pass += str.charAt(char);
-    }
-
-    setPassword(pass);
-  }, [length, charAllowed, numAllowed, setPassword]);
+let passGenerator=useCallback(()=>{
+let pass="";
+let str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+if(numAllowed) str+="1234567890";
+if(charAllowed)str+='!@#$%^&*()_+[]{}';
+for(let i=0;i<=length;i++){
+    let Char=Math.floor(Math.random()*str.length+1);
+    pass+=str.charAt(Char);
+}
+setPassword(pass);
+},[length,charAllowed,numAllowed,setPassword])
 
 const CopyPass=useCallback(()=>{
   passwordRef.current?.select()
