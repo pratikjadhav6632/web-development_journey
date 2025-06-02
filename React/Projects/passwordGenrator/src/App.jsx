@@ -27,8 +27,7 @@ const CopyPass=useCallback(()=>{
 },[password])
 
  useEffect(()=>{
-    passGenerator();
-    
+    passGenerator();  
   },[length,numAllowed,charAllowed,passGenerator])
   return (
     <>
