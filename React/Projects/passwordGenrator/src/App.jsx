@@ -26,10 +26,6 @@ const CopyPass=useCallback(()=>{
   window.navigator.clipboard.writeText(password)
 },[password])
 
-
-const copybtn=document.getElementById("Copybtn")
-
-
  useEffect(()=>{
     passGenerator();
     
@@ -50,7 +46,7 @@ const copybtn=document.getElementById("Copybtn")
           <button 
           id="Copybtn"
           onClick={()=>{
-            alert("Password Copied "),
+            alert("Password Copied successfully ! "),
             CopyPass()
           }}
           className="bg-blue-700 text-white px-4 rounded-r-lg overflow-hidden alert-success">
