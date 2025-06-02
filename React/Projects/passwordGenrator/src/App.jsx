@@ -29,6 +29,14 @@ const CopyPass=useCallback(()=>{
  useEffect(()=>{
     passGenerator();  
   },[length,numAllowed,charAllowed,passGenerator])
+
+ const [otp, setOtp] = useState("");
+
+  const generateOtp = () => {
+    const randomOtp = Math.floor(100000 + Math.random() * 900000).toString();
+    setOtp(randomOtp);
+  };
+
   return (
     <>
       <div className="w-full max-w-xl mx-auto rounded-lg px-4 my-8  pb-8 bg-gray-600  text-orange-600 shrink">
@@ -89,6 +97,21 @@ const CopyPass=useCallback(()=>{
             <label htmlFor="charAllowed">Char Allow</label>
           </div>
         </div>
+      </div>
+
+      <br />
+      <br />
+
+
+       <div className="w-full max-w-xl mx-auto rounded-lg px-4 my-8  pb-8 bg-gray-600  text-orange-600 shrink">
+        <h1 className="text-center text-4xl mb-4">OTP  Generator</h1>
+       <div className="text-4xl font-mono flex justify-center shrink tracking-widest mb-6">{otp || "------"}</div>
+        <button
+          onClick={generateOtp}
+          className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition duration-200 flex shrink mx-auto"
+        >
+          Generate OTP
+        </button>
       </div>
     </>
   );
