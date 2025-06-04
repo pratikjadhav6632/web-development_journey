@@ -25,15 +25,18 @@ function App() {
 
   return (
     <div
-        className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+        className="w-full h-screen flex flex-wrap justify-center  bg-cover bg-no-repeat"
         style={
           {
-           backgroundImage:`url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtIa7UEqjrhEhFCIC8ShQLRYnST1ewzmV80w&s")`
+           backgroundImage:`url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`
           }
         }
+        
     >
-        <div className="w-full">
-            <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+          <h1 className='text-white text-7xl underline decoration-sky-500 py-7 mt-4  mx-3 animate-pulse font-mono' ><span className='underline decoration-green-500'>Currency</span> Converter 💱</h1>
+        <div className="w-full">     
+            <div className="w-full justify-center max-w-xl mx-auto border border-gray-60 rounded-lg p-9 py-12 backdrop-blur-sm bg-white/30">
+            
                 <form
                     onSubmit={(e)=>{
                       e.preventDefault();
