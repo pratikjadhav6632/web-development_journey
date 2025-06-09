@@ -9,7 +9,7 @@ function App() {
   const [to,setTo]=useState('inr')
   const [convertedAmount,setConvertedAmount]=useState(0)
   const curencyInfo=useCurrencyInfo(from)
- const options= Object.keys(curencyInfo)
+  const options= Object.keys(curencyInfo)
 
  const swap=()=>{
   setFrom(to)
@@ -29,8 +29,7 @@ function App() {
           {
            backgroundImage:`url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`
           }
-        }
-        
+        }        
     >
           <h1 className='text-white text-7xl underline decoration-sky-500 py-7 mt-4  mx-3 animate-pulse font-mono' ><span className='underline decoration-green-500'>Currency</span> Converter 💱</h1>
         <div className="w-full">     
@@ -57,8 +56,7 @@ function App() {
                         <button
                             type="button"
                             className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
-                            onClick={swap}
-                           
+                            onClick={swap}                          
                         >
                             swap
                         </button>
