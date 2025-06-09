@@ -27,7 +27,7 @@ function App() {
         className="w-full h-screen flex flex-wrap justify-center  bg-cover bg-no-repeat"
         style={
           {
-           backgroundImage:`url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`
+           backgroundImage:`url("https://images.unsplash.com/photo-1640679954487-2e12a46d5211?q=80&w=2001&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`
           }
         }        
     >
