@@ -19,12 +19,12 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <Link to="/" className="hover:underline">
+                                    <Link to="/" className="hover:text-orange-700">
                                         Home
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/about" className="hover:underline">
+                                    <Link to="/about" className="hover:text-orange-700">
                                         About
                                     </Link>
                                 </li>
@@ -35,8 +35,8 @@ export default function Footer() {
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <a
-                                        href="https://github.com/hiteshchoudhary"
-                                        className="hover:underline"
+                                        href="https://github.com/pratikjadhav6632"
+                                        className="hover:text-orange-700"
                                         target="_blank"
                                         rel="noreferrer"
                                     >
@@ -44,7 +44,7 @@ export default function Footer() {
                                     </a>
                                 </li>
                                 <li>
-                                    <Link to="/" className="hover:underline">
+                                    <Link to="/" className="hover:text-orange-700">
                                         Discord
                                     </Link>
                                 </li>
@@ -54,12 +54,12 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <Link to="#" className="hover:underline">
+                                    <Link to="#" className="hover:text-blue-700">
                                         Privacy Policy
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="#" className="hover:underline">
+                                    <Link to="#" className="hover:text-blue-700">
                                         Terms &amp; Conditions
                                     </Link>
                                 </li>
@@ -71,8 +71,8 @@ export default function Footer() {
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center">
                         © 2023
-                        <a href="https://hiteshchoudhary.com/" className="hover:underline">
-                            hiteshchoudhary
+                        <a href="https://pratikjadhav-portfolio.netlify.app/://" className="hover:text-orange-700">
+                            pratikJadhav
                         </a>
                         . All Rights Reserved.
                     </span>
