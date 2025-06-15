@@ -22,8 +22,8 @@ function App() {
   const toggleComplete = (id) => {
     setTodos((prev) =>
       prev.map((prevTodo) =>
-        prevTodo === id
-          ? { ...prevTodo, completed: !prevTodo.completed }
+        prevTodo.id === id
+          ? { ...prevTodo, complete: !prevTodo.complete }
           : prevTodo
       )
     );
@@ -53,7 +53,11 @@ function App() {
             <TodoForm/>
             </div>
           <div className="flex flex-wrap gap-y-3">
-            <TodoItem/>
+            {todos.map((todo)=>(
+              <div key={todo.id} className="w-full" >
+                  <TodoItem todo={todo}/>
+              </div>
+            ))}
           </div>
         </div>
       </div>
