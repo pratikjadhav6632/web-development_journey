@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState}from 'react'
+import {useTodo} from '../Context/TodoContext'
 
 function TodoItem({ todo }) {
-    
+
 
     return (
         <div
