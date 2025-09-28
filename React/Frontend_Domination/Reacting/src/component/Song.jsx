@@ -9,6 +9,7 @@ function Song() {
     ]
   return (
     <div className='w-full h-screen flex flex-col justify-center gap-7 items-center bg-zinc-300'>
+        <h1 className='text-center text-xl  font-bold'>Event handling </h1>
      {data.map((item,index)=>(
          <div key={index} className='w-60 bg-zinc-100 rounded-md px-4 py-4'>
                 <div className='font-semibold '>
