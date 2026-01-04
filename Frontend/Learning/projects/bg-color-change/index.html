@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg Color Change</title>
+<style>
+    .center{
+        display: flex;
+       margin-top: 20%;
+       justify-content: center;
+        gap: 30px;
+    }
+    .button {
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 10%;
+       
+    }
+    #grey{
+        background-color: grey;
+    }
+    #red{
+        background-color: red;
+    }
+    #yellow{
+        background-color: yellow;
+    }
+    #purple{
+        background-color: purple;
+    }
+    .clock{
+        height: 30px;
+        width:90px;
+        border: 1px solid black;
+        border-radius: 8px;
+        background-color: green;
+        color: white;
+        padding: 10px;
+
+    }
+</style>
+
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="button" id="grey"></div>
+        <div class="button" id="red"></div>
+        <div class="button" id="yellow"></div>
+        <div class="button" id="purple"></div>
+        
+    </div>
+    <h3 style="display: flex; justify-content: center;">click on btn to chnaeg background color</h3>
+
+     <div class="center">
+        <div class="clock"></div>
+    </div>
+        <h3 style="display: flex; justify-content: center;">Digital clock</h3>
+
+    
+    <!-- <div class="center">
+        <div>
+      
+        <form action="">
+            <label for="">height</label><br>
+            <input type="text" class="height" placeholder="Enter your height in cm">
+            <br>  <label for="">weight</label><br>
+            <input type="text" class="weight" placeholder="Enter your weight in cm"><br>
+            <input type="submit" name="" id="">
+        </form><br>
+        <div class="result">result :</div>
+              
+        </div>
+    </div> -->
+
+    <div class="center">
+        <div>
+      
+        <form action="" class="form">
+            <label for="">Guess a number</label><br>
+            <input type="text" class="guessnum" placeholder="Enter your height in cm">
+            <br> 
+            <input type="submit" class="subbtn" name="" id="">
+        </form><br>
+        <div class="Uguess"></div>
+        <div class="remain"></div>
+         <div class="Cnum"></div>
+              
+        </div>
+    </div>
+
+    </body>
+<script src="script.js"></script>
+</html>
