@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client' //Import react-dom library as crea
 import App from './App.jsx' 
 import React from 'react'
 import Chai from './Chai.jsx'
-
+import Profile from './Profile.jsx'
 // function customReact(reactElement,container){
   //   const domElement=document.createElement(reactElement.type);
   //   domElement.innerHTML=reactElement.children;
@@ -29,6 +29,7 @@ let reactElement=React.createElement(
 
 createRoot(document.getElementById('root')).render( 
 <>
+<Profile/>
 <Chai/>
 <App/>
 </>
