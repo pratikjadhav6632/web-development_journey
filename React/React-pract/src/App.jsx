@@ -4,6 +4,7 @@ import DateTime from "./UseEffect/DateTime"
 import UseRef from "./useref/UseRef";
 import { Bio } from "./ContextApi/Bio";
 import BioProvider from "./ContextApi/Context";
+import { UseRed } from "./useReducer";
 function App(){
 
   // const [count ,setCount]=useState(0);
@@ -29,7 +30,7 @@ function App(){
        <button onClick={Decrement} disabled={count<=0}>Decrement</button>
        <button onClick={Reset}>Reset</button>  */}
       
-     <div className=" flex justify-center ">
+     {/* <div className=" flex justify-center ">
       <h1>UseRef : </h1>
       <UseRef/>
      </div>
@@ -47,8 +48,10 @@ function App(){
        
 
         <Bio/>
-      </div>
+      </div> */}
         </BioProvider>
+      <UseRed/>
+        
 
     </>
   )

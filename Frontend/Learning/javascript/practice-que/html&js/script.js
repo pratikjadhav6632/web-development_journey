@@ -1,27 +1,36 @@
-//que 3. get user to input number using prompt("Enter a number").Check if the number is a multiple of 5 or not
+// const buttton=document.getElementById("btn");
 
-/*let num=prompt("Enter a number:")
+// let resolvepromise;
+// const myPromise=new Promise((res,rej)=>{
+//     resolvepromise=res
+// })
+// console.log(myPromise)
 
-if(num%5===0){
-    console.log(num,"is a multiple of 5");
-}else{
-    console.log(num,"is not a multiple of 5");
-}*/
+// buttton.addEventListener("click",()=>{
+//     if(resolvepromise){
+//         console.log("resolved")
+//     }
+// })
 
-//que 6. Create a game where you start with any random number.ask the suer to keep guessin the game number until the user enters correct value.
 
-/*let gameNum=25;
+const myPromise=new Promise((res,rej)=>{
+    document.getElementById("btn").addEventListener("click",()=>{
+        res("Clicked")
+    })
+     document.getElementById("btn2").addEventListener("click",()=>{
+        rej("Some err")
+    })
+})
+console.log(myPromise)
 
-let userNum=prompt("Guess the correct game number");
+// myPromise.then((res)=>console.log(res)).catch((err)=>console.log(err));
 
-while(userNum!=gameNum){
-    userNum=prompt("Guess the correct game number,try again");
+//Using async/await Promise
+const newPromise=async()=>{
+ const res=await myPromise;
+ return "Avinash"
 }
-console.log("congratulation you guess the correct game number");6*/
 
-let firstName=prompt("Enter your first name");
-let lastName=prompt("Enter your last name");
+const res=await newPromise();
 
-//console.log("welcome",firstName,lastName,"!");
-let msg=`Welcome ${firstName} ${lastName} !`;
-alert(msg);
+console.log( res);
